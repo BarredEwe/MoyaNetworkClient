@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
   s.author       = { "BarredEwe" => "barredEwe@gmail.com" }
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/BarredEwe/MoyaNetworkClient.git", :tag => "#{s.version}" }
-  s.source       = { :path => '.' }
   s.source_files = "**/*.swift"
   s.dependency "Moya"
 end
