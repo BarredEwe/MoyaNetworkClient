@@ -1,14 +1,19 @@
 import Moya
 
-public class RestNetworkClient: NetworkClient {
+public enum Result<T> {
+    case success(T)
+    case failure(Error)
+}
 
-    enum ResultType {
+public class MoyaNetworkClient {
+
+    private enum ResultType {
         case object
         case simple
     }
 
-    let jsonDecoder: JSONDecoder
-    var provider: MoyaProvider<MultiTarget>
+    private let jsonDecoder: JSONDecoder
+    private var provider: MoyaProvider<MultiTarget>
 
     public init(dateFormatter: DateFormatter = DateFormatter(),
                 provider: MoyaProvider<MultiTarget> = MoyaProvider<MultiTarget>(plugins: [NetworkLoggerPlugin(verbose: true)])) {
