@@ -5,6 +5,8 @@ public enum Result<T> {
     case failure(Error)
 }
 
+public typealias Completion<T> = (Result<T>) -> Void
+
 public class MoyaNetworkClient {
 
     private enum ResultType {
