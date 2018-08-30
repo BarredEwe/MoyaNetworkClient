@@ -9,3 +9,5 @@ public enum Result<T> {
     case success(T)
     case failure(Error)
 }
+
+public typealias Completion<T> = (Result<T>) -> Void
