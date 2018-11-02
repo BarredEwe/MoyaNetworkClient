@@ -7,20 +7,19 @@ public enum Result<T> {
 
 public typealias Completion<T> = (Result<T>) -> Void
 
-public class MoyaNetworkClient {
+public class MoyaNetworkClient<ErrorType: Error & Decodable> {
 
     private enum ResultType {
         case object
         case simple
     }
 
-    private let jsonDecoder: JSONDecoder
+    private let jsonDecoder = JSONDecoder()
     private var provider: MoyaProvider<MultiTarget>
 
     public init(dateFormatter: DateFormatter = DateFormatter(),
                 provider: MoyaProvider<MultiTarget> = MoyaProvider<MultiTarget>(plugins: [NetworkLoggerPlugin(verbose: true)])) {
         self.provider = provider
-        jsonDecoder = JSONDecoder()
         jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
     }
 
@@ -47,14 +46,16 @@ public class MoyaNetworkClient {
                     }
                     completion(.success(result))
                 } catch let error {
+                    guard let customError = try? response.map(ErrorType.self) else {
+                        completion(.failure(error))
+                        return
+                    }
                     print("There was something wrong with the request! Error: \(error)")
-                    completion(.failure(error))
+                    completion(.failure(customError))
                 }
             case let .failure(error):
                 print("There was something wrong with the request! Error: \(error)")
-                if self.isCancelledError(error) {
-                    return
-                }
+                if self.isCancelledError(error) { return }
                 completion(.failure(error))
             }
         }
@@ -65,5 +66,4 @@ public class MoyaNetworkClient {
         guard case .underlying(let swiftError, _) = error else { return false }
         return (swiftError as NSError).code == NSURLErrorCancelled
     }
-
 }
