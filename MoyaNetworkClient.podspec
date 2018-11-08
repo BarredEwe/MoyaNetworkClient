@@ -1,7 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = "MoyaNetworkClient"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "MoyaNetworkClient."
+  s.swift_version = '4.2'
   s.description  = <<-DESC
   NetworkClient based on Moya.
                    DESC

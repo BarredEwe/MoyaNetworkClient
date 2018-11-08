@@ -9,11 +9,6 @@ public typealias Completion<T> = (Result<T>) -> Void
 
 public class MoyaNetworkClient<ErrorType: Error & Decodable> {
 
-    private enum ResultType {
-        case object
-        case simple
-    }
-
     private let jsonDecoder = JSONDecoder()
     private var provider: MoyaProvider<MultiTarget>
 
@@ -23,26 +18,18 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
         jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
     }
 
-    public func request(_ target: MultiTargetType, _ completion: @escaping (Result<SimpleData>) -> Void) -> Request {
-        return request(target: target, resultType: .simple, completion: completion)
-    }
-
     public func request<T: Codable>(_ target: MultiTargetType, _ completion: @escaping (Result<T>) -> Void) -> Request {
-        return request(target: target, resultType: .object, completion: completion)
-    }
-
-    private func request<T: Codable>(target: MultiTargetType, resultType: ResultType, completion: @escaping (Result<T>) -> Void) -> Request {
         let cancelable = provider.request(MultiTarget(target)) { result in
             switch result {
             case let .success(response):
                 do {
                     let response = try response.filterSuccessfulStatusCodes()
                     let result: T
-                    switch resultType {
-                    case .object:
-                        result = try response.map(T.self, atKeyPath: target.keyPath, using: self.jsonDecoder, failsOnEmptyData: false)
-                    case .simple:
-                        result = SimpleData(content: "\(try response.mapJSON())") as! T
+                    switch T.self {
+                    case is SimpleData.Type: result = SimpleData(content: "\(try response.mapJSON())") as! T
+                    case is URL.Type: result = target.destinationURL as! T
+                    case is Data.Type: result = response.data as! T
+                    default: result = try response.map(T.self, atKeyPath: target.keyPath, using: self.jsonDecoder, failsOnEmptyData: false)
                     }
                     completion(.success(result))
                 } catch let error {
