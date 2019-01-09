@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DC8B3CEE2137E69300B8ED69 /* MoyaNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B3CED2137E69300B8ED69 /* MoyaNetworkClient.swift */; };
 		DC8B3CF02137E69C00B8ED69 /* MultiTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B3CEF2137E69C00B8ED69 /* MultiTargetType.swift */; };
-		DCA08F2A212D31D8000B94C4 /* SimpleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA08F23212D31D8000B94C4 /* SimpleData.swift */; };
 		DCA08F2B212D31D8000B94C4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA08F24212D31D8000B94C4 /* Request.swift */; };
 		DCA08F2C212D31D8000B94C4 /* None.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA08F25212D31D8000B94C4 /* None.swift */; };
 /* End PBXBuildFile section */
@@ -19,7 +18,6 @@
 		DC41F1CA212C483B000384EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC8B3CED2137E69300B8ED69 /* MoyaNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaNetworkClient.swift; sourceTree = "<group>"; };
 		DC8B3CEF2137E69C00B8ED69 /* MultiTargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiTargetType.swift; sourceTree = "<group>"; };
-		DCA08F23212D31D8000B94C4 /* SimpleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleData.swift; sourceTree = "<group>"; };
 		DCA08F24212D31D8000B94C4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		DCA08F25212D31D8000B94C4 /* None.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = None.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,7 +71,6 @@
 		DCA08F22212D31D8000B94C4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DCA08F23212D31D8000B94C4 /* SimpleData.swift */,
 				DCA08F24212D31D8000B94C4 /* Request.swift */,
 				DCA08F25212D31D8000B94C4 /* None.swift */,
 			);
@@ -166,7 +163,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCA08F2A212D31D8000B94C4 /* SimpleData.swift in Sources */,
 				DC8B3CEE2137E69300B8ED69 /* MoyaNetworkClient.swift in Sources */,
 				DCA08F2B212D31D8000B94C4 /* Request.swift in Sources */,
 				DC8B3CF02137E69C00B8ED69 /* MultiTargetType.swift in Sources */,

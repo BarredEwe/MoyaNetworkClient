@@ -26,7 +26,7 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
                     let response = try response.filterSuccessfulStatusCodes()
                     let result: T
                     switch T.self {
-                    case is SimpleData.Type: result = SimpleData(content: "\(try response.mapJSON())") as! T
+                    case is String.Type: result = try response.mapJSON() as! T
                     case is URL.Type: result = target.destinationURL as! T
                     case is Data.Type: result = response.data as! T
                     default: result = try response.map(T.self, atKeyPath: target.keyPath, using: self.jsonDecoder, failsOnEmptyData: false)
