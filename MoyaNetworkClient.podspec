@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MoyaNetworkClient"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "MoyaNetworkClient."
   s.description  = <<-DESC
   NetworkClient based on Moya.
@@ -12,4 +12,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/BarredEwe/MoyaNetworkClient.git", :tag => "#{s.version}" }
   s.source_files = "**/*.swift"
   s.dependency "Moya"
+  s.swift_version = '4.2'
 end
