@@ -42,7 +42,7 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
                     completion(.failure(error))
                 }
             case let .failure(error):
-                if self.isCancelledError(error) { return }
+                if self.isCancelledError(error, requestId: requestId) { return }
                 let error = self.process(error: error, response: error.response)
                 print("There was something wrong with the request! Error: \(error)")
                 completion(.failure(error))
