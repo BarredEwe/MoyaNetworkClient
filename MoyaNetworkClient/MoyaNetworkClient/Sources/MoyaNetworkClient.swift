@@ -11,7 +11,7 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
 
     private let jsonDecoder = JSONDecoder()
     private var provider: MoyaProvider<MultiTarget>
-    private var currentRequest: Request?
+    private var requests = [String: Request]()
 
     public init(dateFormatter: DateFormatter = DateFormatter(),
                 provider: MoyaProvider<MultiTarget> = MoyaProvider<MultiTarget>(plugins: [NetworkLoggerPlugin(verbose: true)])) {
@@ -20,6 +20,7 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
     }
 
     public func request<T: Codable>(_ target: MultiTargetType, _ completion: @escaping (Result<T>) -> Void) -> Request {
+        let requestId = UUID().uuidString
         let cancelable = provider.request(MultiTarget(target)) { result in
             switch result {
             case let .success(response):
@@ -37,26 +38,30 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
                         completion(.success(object))
                         return
                     }
-
-                    var error = error
-                    if let customError = try? response.map(ErrorType.self) { error = customError }
-                    print("There was something wrong with the request! Error: \(error)")
+                    let error = self.process(error: error, response: response)
                     completion(.failure(error))
                 }
             case let .failure(error):
-                print("There was something wrong with the request! Error: \(error)")
                 if self.isCancelledError(error) { return }
+                let error = self.process(error: error, response: error.response)
+                print("There was something wrong with the request! Error: \(error)")
                 completion(.failure(error))
             }
+            self.requests.removeValue(forKey: requestId)
         }
         let request = RequestAdapter(cancellable: cancelable)
-        currentRequest = request
+        requests[requestId] = request
         return request
     }
 
-    private func isCancelledError(_ error: MoyaError) -> Bool {
+    private func process(error: Error, response: Response?) -> Error {
+        if let response = response, let customError = try? response.map(ErrorType.self) { return customError }
+        return error
+    }
+
+    private func isCancelledError(_ error: MoyaError, requestId: String) -> Bool {
         guard case .underlying(let swiftError, _) = error else { return false }
-        guard let currentRequest = currentRequest else { return false }
+        guard let currentRequest = requests[requestId] else { return false }
         return (swiftError as NSError).code == NSURLErrorCancelled && currentRequest.isCancelled
     }
 }
