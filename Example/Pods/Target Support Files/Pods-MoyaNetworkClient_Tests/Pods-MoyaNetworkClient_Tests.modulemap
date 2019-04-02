@@ -1,0 +1,6 @@
+framework module Pods_MoyaNetworkClient_Tests {
+  umbrella header "Pods-MoyaNetworkClient_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

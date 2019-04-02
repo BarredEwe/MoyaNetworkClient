@@ -1,0 +1,12 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'MoyaNetworkClient_Example' do
+  pod 'MoyaNetworkClient', :path => '../'
+
+  target 'MoyaNetworkClient_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
