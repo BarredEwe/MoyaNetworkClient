@@ -7,6 +7,8 @@ public enum Result<T> {
 
 public typealias Completion<T> = (Result<T>) -> Void
 
+public typealias DefaultMoyaNetworkClient = MoyaNetworkClient<MoyaNCError>
+
 public class MoyaNetworkClient<ErrorType: Error & Decodable> {
 
     private let jsonDecoder = JSONDecoder()

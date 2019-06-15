@@ -14,7 +14,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		B3523466B68DEDC320F4CDC3 /* Pods_MoyaNetworkClient_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B20866FDB493085EAC0895E /* Pods_MoyaNetworkClient_Example.framework */; };
 		DC52CA8022537C890056ACBB /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52CA7F22537C890056ACBB /* NewsAPI.swift */; };
-		DC52CA83225386D40056ACBB /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52CA82225386D40056ACBB /* CustomError.swift */; };
 		DC52CA85225386E80056ACBB /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52CA84225386E80056ACBB /* Fact.swift */; };
 		DC52CA8A225387DB0056ACBB /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52CA89225387DB0056ACBB /* FactTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -36,7 +35,6 @@
 		C302527274FB2AFEF0C6CFDB /* Pods-MoyaNetworkClient_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaNetworkClient_Example.debug.xcconfig"; path = "Target Support Files/Pods-MoyaNetworkClient_Example/Pods-MoyaNetworkClient_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CCF4DCA8AD00E5056ABD0454 /* MoyaNetworkClient.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MoyaNetworkClient.podspec; path = ../MoyaNetworkClient.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DC52CA7F22537C890056ACBB /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
-		DC52CA82225386D40056ACBB /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		DC52CA84225386E80056ACBB /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		DC52CA89225387DB0056ACBB /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
 		EF63850F077ED077B459B669 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 		DC52CA81225386C90056ACBB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DC52CA82225386D40056ACBB /* CustomError.swift */,
 				DC52CA84225386E80056ACBB /* Fact.swift */,
 			);
 			name = Models;
@@ -206,7 +203,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -221,6 +218,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -253,23 +251,25 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MoyaNetworkClient_Example/Pods-MoyaNetworkClient_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${PODS_ROOT}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/Alamofire/Alamofire.framework.dSYM",
+				"${PODS_ROOT}/Moya/Moya.framework",
+				"${PODS_ROOT}/Moya/Moya.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/MoyaNetworkClient/MoyaNetworkClient.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${PODS_ROOT}/Result/Result.framework",
+				"${PODS_ROOT}/Result/Result.framework.dSYM",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Alamofire.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Moya.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MoyaNetworkClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Result.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -306,7 +306,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				DC52CA83225386D40056ACBB /* CustomError.swift in Sources */,
 				DC52CA85225386E80056ACBB /* Fact.swift in Sources */,
 				DC52CA8A225387DB0056ACBB /* FactTableViewCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
@@ -340,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -348,12 +348,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -393,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -401,12 +404,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -447,7 +452,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.MoyaNetworkClient-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -463,7 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.MoyaNetworkClient-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

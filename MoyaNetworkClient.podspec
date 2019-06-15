@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MoyaNetworkClient'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = 'MoyaNetworkClient pod.'
 
 # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'BarredEwe' => 'barredEwe@gmail.com' }
   s.source           = { :git => 'https://github.com/BarredEwe/MoyaNetworkClient.git', :tag => s.version.to_s }
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 
   s.ios.deployment_target = '8.0'
 

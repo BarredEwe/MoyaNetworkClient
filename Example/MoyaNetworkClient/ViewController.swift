@@ -13,7 +13,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    private let networkCLient = MoyaNetworkClient<CustomError>()
+    private let networkCLient = DefaultMoyaNetworkClient()
+    private let dateFormatter = DateFormatter()
     private var facts = [Fact]()
 
     override func viewDidLoad() {
@@ -24,7 +25,8 @@ class ViewController: UIViewController {
                 self?.facts = facts
                 self?.tableView.reloadData()
             case let .failure(error):
-                print(error.localizedDescription)
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                self?.present(alert, animated: true)
             }
         }
     }

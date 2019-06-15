@@ -20,8 +20,8 @@ extension NewsAPI: MultiTargetType {
 
     var path: String {
         switch self {
-        case .randomFacts: return "/facts/random&amount=20"
-        case .catFacts: return "/facts?animal_type=cat"
+        case .randomFacts: return "/facts/random"
+        case .catFacts: return "/facts/random"
         }
     }
 
@@ -59,12 +59,10 @@ extension NewsAPI: MultiTargetType {
 
     var task: Task {
         switch self {
-        case .randomFacts, .catFacts: return .requestPlain
+        case .catFacts:
+            return .requestParameters(parameters: ["animal_type": "cat", "amount": 20], encoding: URLEncoding.default)
+        case .randomFacts: return .requestPlain
         }
-    }
-
-    var headers: [String : String]? {
-        return nil
     }
 }
 

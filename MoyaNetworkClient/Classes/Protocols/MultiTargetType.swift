@@ -13,4 +13,8 @@ public extension MultiTargetType {
     var destinationURL: URL? {
         return nil
     }
+
+    var headers: [String : String]? {
+        return nil
+    }
 }

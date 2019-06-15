@@ -11,7 +11,8 @@ import Foundation
 struct Fact: Codable {
     let id: String
     let v: Int
-    let text, updatedAt: String
+    let text: String
+    let updatedAt: String
     let deleted: Bool
     let source: String
     let used: Bool
