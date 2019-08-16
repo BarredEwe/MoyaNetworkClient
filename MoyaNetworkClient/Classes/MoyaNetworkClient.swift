@@ -1,11 +1,7 @@
 import Moya
 
-public enum Result<T> {
-    case success(T)
-    case failure(Error)
-}
-
-public typealias Completion<T> = (Result<T>) -> Void
+public typealias Result<Success> = Swift.Result<Success, Error>
+public typealias Completion<Value> = (Result<Value>) -> Void
 
 public typealias DefaultMoyaNetworkClient = MoyaNetworkClient<MoyaNCError>
 
@@ -21,22 +17,38 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
         jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
     }
 
-    @discardableResult public func request<T: Codable>(_ target: MultiTargetType, _ completion: @escaping (Result<T>) -> Void) -> Request {
+    @discardableResult public func request<Value: Codable>(_ target: MultiTargetType, _ completion: @escaping Completion<Value>) -> Request {
+        return providerRequest(target, completion)
+    }
+
+    @discardableResult public func request<Value: Codable>(_ target: MultiTargetType) -> FutureResult<Value> {
+        return FutureResult<Value> { completion in
+            self.providerRequest(target) { (result: Result<Value>) in
+                switch result {
+                case let .success(value): completion(.success(value))
+                case let .failure(error): completion(.failure(error))
+                }
+            }
+        }
+    }
+
+    // MARK: Private Methods
+    @discardableResult private func providerRequest<Value: Codable>(_ target: MultiTargetType, _ completion: @escaping Completion<Value>) -> Request {
         let requestId = UUID().uuidString
         let cancelable = provider.request(MultiTarget(target)) { result in
             switch result {
             case let .success(response):
                 do {
                     let response = try response.filterSuccessfulStatusCodes()
-                    var result: T
-                    switch T.self {
-                    case is URL.Type: result = target.destinationURL as! T
-                    case is Data.Type: result = response.data as! T
-                    default: result = try response.map(T.self, atKeyPath: target.keyPath, using: self.jsonDecoder, failsOnEmptyData: false)
+                    var result: Value
+                    switch Value.self {
+                    case is URL.Type: result = target.destinationURL as! Value
+                    case is Data.Type: result = response.data as! Value
+                    default: result = try response.map(Value.self, atKeyPath: target.keyPath, using: self.jsonDecoder, failsOnEmptyData: false)
                     }
                     completion(.success(result))
                 } catch let error {
-                    if let result = try? response.mapJSON(), let object = result as? T {
+                    if let result = try? response.mapJSON(), let object = result as? Value {
                         completion(.success(object))
                         return
                     }
@@ -67,4 +79,3 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
         return (swiftError as NSError).code == NSURLErrorCancelled && currentRequest.isCancelled
     }
 }
-

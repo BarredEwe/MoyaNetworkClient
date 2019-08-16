@@ -203,19 +203,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = VG22XBSBZ8;
+						DevelopmentTeam = W32FTX2H6D;
 						LastSwiftMigration = 1010;
 					};
 				};
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "MoyaNetworkClient" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
@@ -253,23 +253,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MoyaNetworkClient_Example/Pods-MoyaNetworkClient_Example-frameworks.sh",
-				"${PODS_ROOT}/Alamofire/Alamofire.framework",
-				"${PODS_ROOT}/Alamofire/Alamofire.framework.dSYM",
-				"${PODS_ROOT}/Moya/Moya.framework",
-				"${PODS_ROOT}/Moya/Moya.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/MoyaNetworkClient/MoyaNetworkClient.framework",
-				"${PODS_ROOT}/Result/Result.framework",
-				"${PODS_ROOT}/Result/Result.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Alamofire.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Moya.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MoyaNetworkClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Result.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -445,11 +439,11 @@
 			baseConfigurationReference = C302527274FB2AFEF0C6CFDB /* Pods-MoyaNetworkClient_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VG22XBSBZ8;
+				DEVELOPMENT_TEAM = W32FTX2H6D;
 				INFOPLIST_FILE = MoyaNetworkClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.MoyaNetworkClient-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.MoyaNetworkClient-Example1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -461,11 +455,11 @@
 			baseConfigurationReference = 611F83D90AB55D7F0D89D47E /* Pods-MoyaNetworkClient_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VG22XBSBZ8;
+				DEVELOPMENT_TEAM = W32FTX2H6D;
 				INFOPLIST_FILE = MoyaNetworkClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.MoyaNetworkClient-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.MoyaNetworkClient-Example1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;

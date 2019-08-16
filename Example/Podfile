@@ -1,10 +1,7 @@
-plugin 'cocoapods-binary'
-
 platform :ios, '8.0'
 
 use_frameworks!
 
 target 'MoyaNetworkClient_Example' do
-  pod 'Moya', :binary => true
   pod 'MoyaNetworkClient', :path => '../'
 end
