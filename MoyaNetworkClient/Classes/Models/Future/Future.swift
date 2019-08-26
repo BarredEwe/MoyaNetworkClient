@@ -42,4 +42,57 @@ extension Future {
         }
     }
 
+    public static func async(_ future: Future, delay: TimeInterval = 0, on queue: DispatchQueue, completesOn completionQueue: DispatchQueue = .main) -> Future {
+        return Future { cb in
+            queue.asyncAfter(deadline: .now() + delay) {
+                future.run { value in
+                    completionQueue.async {
+                        cb(value)
+                    }
+                }
+            }
+        }
+    }
+
+    public func async( delay: TimeInterval = 0, on queue: DispatchQueue, completesOn completionQueue: DispatchQueue = .main) -> Future {
+        return Future.async(self, delay: delay, on: queue, completesOn: completionQueue)
+    }
+
+    public func asyncOnMain() -> Future {
+        return async(on: .main, completesOn: .main)
+    }
+
+    public func parallel<NewResponse>(_ a: Future<NewResponse>, completesOn completionQueue: DispatchQueue = .main) -> Future<(Response, NewResponse)> {
+        return createParallelWith(self, a, completesOn: completionQueue) { ($0, $1) }
+    }
+
+    public func parallelWith<NewResponse, FinalResponse>(_ fA: Future<NewResponse>, completesOn completionQueue: DispatchQueue = .main,
+                                             combine: @escaping (Response, NewResponse) -> FinalResponse) -> Future<FinalResponse> {
+        return createParallelWith(self, fA, completesOn: completionQueue, combine: combine)
+    }
+
+    func createParallelWith<A, B, FinalResponse>(_ fA: Future<A>, _ fB: Future<B>, completesOn completionQueue: DispatchQueue = .main,
+                                                  combine: @escaping (A, B) -> FinalResponse) -> Future<FinalResponse> {
+        return Future<FinalResponse> { callback in
+
+            let maybeCompleted: (A?, B?) -> Void = {
+                guard let a = $0, let b = $1 else { return }
+                callback(combine(a, b))
+            }
+
+            var a: A? = nil
+            var b: B? = nil
+
+            fA.async(on: .global(), completesOn: completionQueue).run {
+                a = $0
+                maybeCompleted(a, b)
+            }
+
+            fB.async(on: .global(), completesOn: completionQueue).run {
+                b = $0
+                maybeCompleted(a, b)
+            }
+        }
+    }
+
 }
