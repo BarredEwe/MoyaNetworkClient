@@ -1,6 +1,6 @@
 {
   "name": "MoyaNetworkClient",
-  "version": "0.1.8",
+  "version": "0.3.0",
   "summary": "MoyaNetworkClient pod.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/BarredEwe/MoyaNetworkClient",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/BarredEwe/MoyaNetworkClient.git",
-    "tag": "0.1.8"
+    "tag": "0.3.0"
   },
   "swift_versions": "5.0",
   "platforms": {

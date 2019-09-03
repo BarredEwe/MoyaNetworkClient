@@ -3,19 +3,19 @@ import Foundation
 public typealias FutureResult<Value> = Future<Result<Value>>
 
 extension Future {
-    public func mapResult<Success, NewSuccess>(_ transform: @escaping (Success) -> NewSuccess) -> FutureResult<NewSuccess>
+    public func mapSuccess<Success, NewSuccess>(_ transform: @escaping (Success) -> NewSuccess) -> FutureResult<NewSuccess>
         where Response == Result<Success> {
             return map { $0.map(transform) }
     }
 
 
-    public func mapResultError<Success>(_ transform: @escaping (Error) -> Error) -> FutureResult<Success>
+    public func mapError<Success>(_ transform: @escaping (Error) -> Error) -> FutureResult<Success>
         where Response == Result<Success> {
             return map { $0.mapError(transform) }
     }
 
 
-    public func flatMapResult<Success, NewSuccess>(_ transform: @escaping (Success) -> FutureResult<NewSuccess>?) -> FutureResult<NewSuccess>
+    public func flatMapSuccess<Success, NewSuccess>(_ transform: @escaping (Success) -> FutureResult<NewSuccess>?) -> FutureResult<NewSuccess>
         where Response == Result<Success>{
             return flatMap { result in
                 FutureResult<NewSuccess> { callback in
@@ -33,7 +33,7 @@ extension Future {
             }
     }
 
-    public func flatMapResultError<Success>(_ transform: @escaping (Error) -> FutureResult<Success>?) -> FutureResult<Success>
+    public func flatMapError<Success>(_ transform: @escaping (Error) -> FutureResult<Success>?) -> FutureResult<Success>
         where Response == Result<Success> {
             return flatMap { result in
                 FutureResult<Success> { callback in
@@ -51,23 +51,23 @@ extension Future {
             }
     }
 
-    public func observeResultSuccess<Success>(_ callback: @escaping (Success) -> Void) -> Future
+    public func observeSuccess<Success>(_ callback: @escaping (Success) -> Void) -> Future
         where Response == Result<Success> {
-            return mapResult {
+            return mapSuccess {
                 callback($0)
                 return $0
             }
     }
 
-    public func observeResultError<Success>(_ callback: @escaping (Error) -> Void) -> Future
+    public func observeError<Success>(_ callback: @escaping (Error) -> Void) -> Future
         where Response == Result<Success> {
-            return mapResultError {
+            return mapError {
                 callback($0)
                 return $0
             }
     }
 
-    public func parallelResult<Success, NewResponse>(_ a: FutureResult<NewResponse>, completesOn completionQueue: DispatchQueue = .main)
+    public func parallel<Success, NewResponse>(_ a: FutureResult<NewResponse>, completesOn completionQueue: DispatchQueue = .main)
         -> FutureResult<(Success, NewResponse)>  where Response == Result<Success> {
             return createParallelWith(self, a, completesOn: completionQueue) {
                 (result: Result<Success>, newResult: Result<NewResponse>) -> Result<(Success, NewResponse)> in
@@ -80,7 +80,7 @@ extension Future {
             }
     }
 
-    public func parallelResultWith<Success, NewResponse, FinalResponse>(_ fA: FutureResult<NewResponse>,
+    public func parallel<Success, NewResponse, FinalResponse>(_ fA: FutureResult<NewResponse>,
                                                                         completesOn completionQueue: DispatchQueue = .main,
                                                                         combine: @escaping (Success, NewResponse) -> FinalResponse)
         -> FutureResult<FinalResponse> where Response == Result<Success> {

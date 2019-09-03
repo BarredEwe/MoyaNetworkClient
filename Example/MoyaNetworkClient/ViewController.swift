@@ -19,20 +19,39 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCatFacts { [weak self] result in
+        getAnimalFactsUseFutureRequestChain()
+    }
+
+    // MARK: Private Methods
+    private func getCatFacts() {
+        networkCLient.request(NewsAPI.catFacts) { [weak self] (result: Result<[Fact]>) in
             switch result {
             case let .success(facts):
                 self?.facts = facts
                 self?.tableView.reloadData()
             case let .failure(error):
-                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                self?.present(alert, animated: true)
+                self?.showError(with: error.localizedDescription)
             }
         }
     }
 
-    private func getCatFacts(completion: @escaping Completion<[Fact]>) {
-        networkCLient.request(NewsAPI.catFacts, completion)
+    private func getAnimalFactsUseFutureRequestChain() {
+        networkCLient.request(NewsAPI.catFacts)
+            .flatMapSuccess { [weak self] (facts: [Fact]) -> FutureResult<[Fact]>? in
+                self?.facts.append(contentsOf: facts)
+                return self?.networkCLient.request(NewsAPI.dogFacts)
+            }
+            .observeSuccess { [weak self] facts in
+                self?.facts.append(contentsOf: facts)
+                self?.tableView.reloadData()
+            }
+            .observeError { [weak self] error in self?.showError(with: error.localizedDescription) }
+            .execute()
+    }
+
+    private func showError(with message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        self.present(alert, animated: true)
     }
 }
 

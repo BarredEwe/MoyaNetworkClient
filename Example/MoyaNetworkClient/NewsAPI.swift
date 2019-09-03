@@ -10,7 +10,7 @@ import Moya
 import MoyaNetworkClient
 
 enum NewsAPI {
-    case randomFacts
+    case dogFacts
     case catFacts
 }
 
@@ -18,22 +18,15 @@ extension NewsAPI: MultiTargetType {
 
     var baseURL: URL { return URL(string: "https://cat-fact.herokuapp.com")! }
 
-    var path: String {
+    var route: Route {
         switch self {
-        case .randomFacts: return "/facts/random"
-        case .catFacts: return "/facts/random"
-        }
-    }
-
-    var method: Moya.Method {
-        switch self {
-        case .randomFacts, .catFacts: return .get
+        case .dogFacts, .catFacts: return .get("/facts/random")
         }
     }
 
     var sampleData: Data {
         switch self {
-        case .randomFacts, .catFacts: return
+        case .dogFacts, .catFacts: return
             """
                 [{
                     "_id": "591f9894d369931519ce358f",
@@ -59,10 +52,8 @@ extension NewsAPI: MultiTargetType {
 
     var task: Task {
         switch self {
-        case .catFacts:
-            return .requestParameters(parameters: ["animal_type": "cat", "amount": 20], encoding: URLEncoding.default)
-        case .randomFacts: return .requestPlain
+        case .catFacts: return .requestParameters(parameters: ["animal_type": "cat", "amount": 20], encoding: URLEncoding.default)
+        case .dogFacts: return .requestParameters(parameters: ["animal_type": "dog", "amount": 20], encoding: URLEncoding.default)
         }
     }
 }
-
