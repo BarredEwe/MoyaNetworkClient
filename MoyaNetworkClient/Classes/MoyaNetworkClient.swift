@@ -7,14 +7,14 @@ public typealias DefaultMoyaNetworkClient = MoyaNetworkClient<MoyaNCError>
 
 public class MoyaNetworkClient<ErrorType: Error & Decodable> {
 
-    private let jsonDecoder = JSONDecoder()
+    private var jsonDecoder: JSONDecoder
     private var provider: MoyaProvider<MultiTarget>
     private var requests = [String: Request]()
 
-    public init(dateFormatter: DateFormatter = DateFormatter(),
+    public init(jsonDecoder: JSONDecoder = JSONDecoder(),
                 provider: MoyaProvider<MultiTarget> = MoyaProvider<MultiTarget>(plugins: [NetworkLoggerPlugin(verbose: true)])) {
+        self.jsonDecoder = jsonDecoder
         self.provider = provider
-        jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
     }
 
     @discardableResult public func request<Value: Codable>(_ target: MultiTargetType, _ completion: @escaping Completion<Value>) -> Request {
