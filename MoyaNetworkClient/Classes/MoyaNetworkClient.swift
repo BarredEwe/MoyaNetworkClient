@@ -63,8 +63,10 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
             }
             self.requests.removeValue(forKey: requestId)
         }
+        objc_sync_enter(requests)
         let request = RequestAdapter(cancellable: cancelable)
         requests[requestId] = request
+        objc_sync_exit(requests)
         return request
     }
 
