@@ -14,7 +14,7 @@ enum NewsAPI {
     case catFacts
 }
 
-extension NewsAPI: MultiTargetType {
+extension NewsAPI: MoyaTargetType {
 
     var baseURL: URL { return URL(string: "https://cat-fact.herokuapp.com")! }
 

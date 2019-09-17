@@ -1,11 +1,11 @@
 PODS:
-  - Alamofire (4.8.2)
+  - Alamofire (4.9.0)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
-  - MoyaNetworkClient (0.3.0):
+  - MoyaNetworkClient (0.4.2):
     - Moya
   - Result (4.1.0)
 
@@ -23,9 +23,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
-  MoyaNetworkClient: f7f61a44a2a2c3a65b805f90fd894f71287b47ed
+  MoyaNetworkClient: 139889f83e84e935594c489888af320bb9586e17
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
 
 PODFILE CHECKSUM: 6bdc9fc2236bd8d5cb986cd89ac53bc0c3e829fb

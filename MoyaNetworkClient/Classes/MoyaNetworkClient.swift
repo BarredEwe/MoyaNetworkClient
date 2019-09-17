@@ -17,11 +17,11 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
         self.provider = provider
     }
 
-    @discardableResult public func request<Value: Codable>(_ target: MultiTargetType, _ completion: @escaping Completion<Value>) -> Request {
+    @discardableResult public func request<Value: Codable>(_ target: BaseTargetType, _ completion: @escaping Completion<Value>) -> Request {
         return providerRequest(target, completion)
     }
 
-    @discardableResult public func request<Value: Codable>(_ target: MultiTargetType) -> FutureResult<Value> {
+    @discardableResult public func request<Value: Codable>(_ target: BaseTargetType) -> FutureResult<Value> {
         return FutureResult<Value> { completion in
             self.providerRequest(target) { (result: Result<Value>) in
                 switch result {
@@ -33,7 +33,7 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
     }
 
     // MARK: Private Methods
-    @discardableResult private func providerRequest<Value: Codable>(_ target: MultiTargetType, _ completion: @escaping Completion<Value>) -> Request {
+    @discardableResult private func providerRequest<Value: Codable>(_ target: BaseTargetType, _ completion: @escaping Completion<Value>) -> Request {
         let requestId = UUID().uuidString
         let cancelable = provider.request(MultiTarget(target)) { result in
             switch result {
