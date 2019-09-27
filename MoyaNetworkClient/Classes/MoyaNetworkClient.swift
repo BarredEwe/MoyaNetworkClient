@@ -61,12 +61,14 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
                 print("There was something wrong with the request! Error: \(error)")
                 completion(.failure(error))
             }
+            objc_sync_enter(self)
             self.requests.removeValue(forKey: requestId)
+            objc_sync_exit(self)
         }
-        objc_sync_enter(requests)
+        objc_sync_enter(self)
         let request = RequestAdapter(cancellable: cancelable)
         requests[requestId] = request
-        objc_sync_exit(requests)
+        objc_sync_exit(self)
         return request
     }
 
@@ -77,7 +79,9 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
 
     private func isCancelledError(_ error: MoyaError, requestId: String) -> Bool {
         guard case .underlying(let swiftError, _) = error else { return false }
+        objc_sync_enter(self)
         guard let currentRequest = requests[requestId] else { return false }
+        objc_sync_exit(self)
         return (swiftError as NSError).code == NSURLErrorCancelled && currentRequest.isCancelled
     }
 }
