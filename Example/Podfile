@@ -4,4 +4,5 @@ use_frameworks!
 
 target 'MoyaNetworkClient_Example' do
   pod 'MoyaNetworkClient', :path => '../'
+  pod 'MoyaNetworkClient/Cache', :path => '../'
 end
