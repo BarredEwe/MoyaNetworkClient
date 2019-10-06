@@ -13,11 +13,14 @@ PODS:
     - MoyaNetworkClient/Core
   - MoyaNetworkClient/Core (0.4.4):
     - Moya
+  - MoyaNetworkClient/Future (0.4.4):
+    - MoyaNetworkClient/Core
   - Result (4.1.0)
 
 DEPENDENCIES:
   - MoyaNetworkClient (from `../`)
   - MoyaNetworkClient/Cache (from `../`)
+  - MoyaNetworkClient/Future (from `../`)
 
 SPEC REPOS:
   trunk:
@@ -34,9 +37,9 @@ SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
-  MoyaNetworkClient: fd7fac08282f4549626bf07f9f73619d6bf1aaa5
+  MoyaNetworkClient: fc79302823928c39562613ede95c06a1ea303c2c
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
 
-PODFILE CHECKSUM: 0d6294ec425949ec4a5a4e656e2c2c526480c866
+PODFILE CHECKSUM: 517644dffafd3c0c09f9065039c9c69478ec1910
 
 COCOAPODS: 1.8.1

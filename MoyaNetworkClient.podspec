@@ -40,4 +40,10 @@ TODO: Add long description of the pod here.
     cache.dependency "Cache"
   end
 
+  s.subspec 'Future' do |future|
+    future.source_files = 'MoyaNetworkClient/Classes/Future/**/*'
+    future.dependency "MoyaNetworkClient/Core"
+    future.weak_framework = 'Cache'
+  end
+
 end

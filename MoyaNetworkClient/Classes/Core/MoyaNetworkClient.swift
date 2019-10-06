@@ -14,9 +14,9 @@ internal class SimpleCancellable: Cancellable {
 
 public class MoyaNetworkClient<ErrorType: Error & Decodable> {
 
-    private var jsonDecoder: JSONDecoder
-    private var provider: MoyaProvider<MultiTarget>
-    private var requests = [String: Request]()
+    internal var jsonDecoder: JSONDecoder
+    internal var provider: MoyaProvider<MultiTarget>
+    internal var requests = [String: Request]()
 
     public init(jsonDecoder: JSONDecoder = JSONDecoder(),
                 provider: MoyaProvider<MultiTarget> = MoyaProvider<MultiTarget>(plugins: [NetworkLoggerPlugin(verbose: true)])) {
@@ -24,28 +24,18 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
         self.provider = provider
     }
 
-    @discardableResult public func request<Value: Codable>(_ target: BaseTargetType, _ completion: @escaping Completion<Value>) -> Request {
+    @discardableResult
+    public func request<Value: Codable>(_ target: BaseTargetType, _ completion: @escaping Completion<Value>) -> Request {
+        #if canImport(Cache)
+        return providerRequest(target, cachePolicy: target.cachePolicy, completion)
+        #else
         return providerRequest(target, completion)
-    }
-
-    @discardableResult public func request<Value: Codable>(_ target: BaseTargetType) -> FutureResult<Value> {
-        return FutureResult<Value> { completion in
-            self.providerRequest(target) { (result: Result<Value>) in
-                switch result {
-                case let .success(value): completion(.success(value))
-                case let .failure(error): completion(.failure(error))
-                }
-            }
-        }
+        #endif
     }
 
     // MARK: Private Methods
-    @discardableResult private func providerRequest<Value: Codable>(_ target: BaseTargetType, _ completion: @escaping Completion<Value>) -> Request {
-        #if canImport(Cache)
-        if let request = processCache(target, completion) {
-            return request
-        }
-        #endif
+    @discardableResult
+    internal func providerRequest<Value: Codable>(_ target: BaseTargetType, _ completion: @escaping Completion<Value>) -> Request {
         let requestId = UUID().uuidString
         let cancelable = provider.request(MultiTarget(target)) { result in
             switch result {
@@ -68,7 +58,7 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
         return request
     }
 
-    private func process<Value: Codable>(response: Response, _ target: BaseTargetType, _ completion: @escaping Completion<Value>) {
+    internal func process<Value: Codable>(response: Response, _ target: BaseTargetType, _ completion: @escaping Completion<Value>) {
         do {
             let response = try response.filterSuccessfulStatusCodes()
             var result: Value
@@ -98,41 +88,12 @@ public class MoyaNetworkClient<ErrorType: Error & Decodable> {
         }
     }
 
-    #if canImport(Cache)
-    private func processCache<Value: Codable>(_ target: BaseTargetType, _ completion: @escaping Completion<Value>) -> Request? {
-        let responseCache: () -> Response? = {
-            let cacheKey = ResponseCache.uniqueKey(target)
-            return try? ResponseCache.shared.responseStorage?.object(forKey: cacheKey)
-        }
-
-        switch target.cachePolicy {
-            // TODO: Process all cachePolicy
-        case .useProtocolCachePolicy, .reloadIgnoringLocalCacheData, .reloadIgnoringLocalAndRemoteCacheData, .reloadRevalidatingCacheData:
-            break
-        case .returnCacheDataElseLoad:
-            if let responseCache = responseCache() {
-                process(response: responseCache, target, completion)
-                return RequestAdapter(cancellable: SimpleCancellable())
-            }
-        case .returnCacheDataDontLoad:
-            if let responseCache = responseCache() {
-                process(response: responseCache, target, completion)
-            } else {
-                // TODO: Return error
-            }
-            return RequestAdapter(cancellable: SimpleCancellable())
-        @unknown default: break
-        }
-        return nil
-    }
-    #endif
-
-    private func process(error: Error, response: Response?) -> Error {
+    internal func process(error: Error, response: Response?) -> Error {
         if let response = response, let customError = try? response.map(ErrorType.self) { return customError }
         return error
     }
 
-    private func isCancelledError(_ error: MoyaError, requestId: String) -> Bool {
+    internal func isCancelledError(_ error: MoyaError, requestId: String) -> Bool {
         guard case .underlying(let swiftError, _) = error else { return false }
         objc_sync_enter(self)
         guard let currentRequest = requests[requestId] else { return false }
