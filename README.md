@@ -27,7 +27,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 client = DefaultMoyaNetworkClient()
 
 // type 'Test' must be Codable
-provider.request(.zen) { (result: Result<Test>) in
+client.request(.zen) { (result: Result<Test>) in
     switch result {
     case let .success(test):
         // do something with the finished object
