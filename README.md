@@ -25,7 +25,6 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ```swift
 client = DefaultMoyaNetworkClient()
-client.request(.zen) { 
 
 // type 'Test' must be Codable
 provider.request(.zen) { (result: Result<Test>) in
