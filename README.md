@@ -11,6 +11,8 @@ Simple Swift Requests
 <a href="https://developer.apple.com/swift"><img alt="Swift5" src="https://img.shields.io/badge/language-Swift5-orange.svg"/></a> 
 <a href="https://cocoapods.org/pods/MoyaNetworkClient"><img alt="License" src="https://img.shields.io/cocoapods/l/MoyaNetworkClient.svg"/></a>
 <a href="https://developer.apple.com/"><img alt="Platform" src="https://img.shields.io/badge/platform-iOS-green.svg"/></a>
+<a href="https://www.codefactor.io/repository/github/barredewe/moyanetworkclient"><img src="https://www.codefactor.io/repository/github/barredewe/moyanetworkclient/badge" alt="CodeFactor" /></a>
+<a href="https://travis-ci.com/BarredEwe/MoyaNetworkClient"><img src="https://travis-ci.com/BarredEwe/MoyaNetworkClient.svg?branch=master" alt="CodeFactor" /></a>
 </p>
 
 ---
