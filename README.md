@@ -55,13 +55,13 @@ A simple example to use caching requests:
 Definition of caching at the API level:
 ```swift
 enum TestAPI {
-	case .zen
+    case .zen
 }
 
 extension TestAPI: MoyaTargetType {
-	var cachePolicy: MoyaCachePolicy {
-		return .returnCacheDataElseLoad
-	}
+    var cachePolicy: MoyaCachePolicy {
+        return .returnCacheDataElseLoad
+    }
 }
 ```
 Definition of caching at the request level:
@@ -80,9 +80,9 @@ client = DefaultMoyaNetworkClient()
 
 // type 'Test' must be Codable
 client.request(.zen)
-	.observeSuccess { (test: Test) in /* do something with the finished object */ }
-	.observeError { error in /* do something with error */) }
-	.execute()
+    .observeSuccess { (test: Test) in /* do something with the finished object */ }
+    .observeError { error in /* do something with error */) }
+    .execute()
 ```
 
 ## Installation
