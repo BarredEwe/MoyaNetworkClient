@@ -80,8 +80,8 @@ extension Future {
                 callback(combine(a, b))
             }
 
-            var a: A? = nil
-            var b: B? = nil
+            var a: A?
+            var b: B?
 
             fA.async(on: .global(), completesOn: completionQueue).run {
                 a = $0
