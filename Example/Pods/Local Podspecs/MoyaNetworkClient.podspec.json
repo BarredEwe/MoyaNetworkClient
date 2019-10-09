@@ -1,6 +1,6 @@
 {
   "name": "MoyaNetworkClient",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "summary": "MoyaNetworkClient pod.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/BarredEwe/MoyaNetworkClient",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/BarredEwe/MoyaNetworkClient.git",
-    "tag": "0.4.4"
+    "tag": "0.5.0"
   },
   "swift_versions": "5.0",
   "default_subspecs": "Core",
@@ -49,8 +49,7 @@
         "MoyaNetworkClient/Core": [
 
         ]
-      },
-      "weak_frameworks": "Cache"
+      }
     }
   ],
   "swift_version": "5.0"
