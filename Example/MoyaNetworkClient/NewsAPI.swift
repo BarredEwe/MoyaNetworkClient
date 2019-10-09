@@ -56,4 +56,11 @@ extension NewsAPI: MoyaTargetType {
         case .dogFacts: return .requestParameters(parameters: ["animal_type": "dog", "amount": 20], encoding: URLEncoding.default)
         }
     }
+
+    var cachePolicy: MoyaCachePolicy {
+        switch self {
+        case .catFacts: return .returnCacheDataElseLoad
+        case .dogFacts: return .returnCacheDataElseLoad
+        }
+    }
 }

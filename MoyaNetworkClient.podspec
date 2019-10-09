@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MoyaNetworkClient'
-  s.version          = '0.4.3'
+  s.version          = '0.5.0'
   s.summary          = 'MoyaNetworkClient pod.'
 
 # This description is used to generate tags and improve search results.
@@ -26,9 +26,23 @@ TODO: Add long description of the pod here.
   s.author           = { 'BarredEwe' => 'barredEwe@gmail.com' }
   s.source           = { :git => 'https://github.com/BarredEwe/MoyaNetworkClient.git', :tag => s.version.to_s }
   s.swift_version = '5.0'
-
+  s.default_subspec = 'Core'
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'MoyaNetworkClient/Classes/**/*'
-  s.dependency 'Moya'
+  s.subspec 'Core' do |core|
+    core.source_files = 'MoyaNetworkClient/Classes/Core/**/*'
+    core.dependency 'Moya'
+  end
+
+  s.subspec 'Cache' do |cache|
+    cache.source_files = 'MoyaNetworkClient/Classes/Cache/**/*'
+    cache.dependency "MoyaNetworkClient/Core"
+    cache.dependency "Cache"
+  end
+
+  s.subspec 'Future' do |future|
+    future.source_files = 'MoyaNetworkClient/Classes/Future/**/*'
+    future.dependency "MoyaNetworkClient/Core"
+  end
+
 end

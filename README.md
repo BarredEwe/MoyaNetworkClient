@@ -19,7 +19,7 @@ Simple Swift Requests
 
 ## Introduction
 
-MoyaNC is an abstraction over abstraction (thanks to [Moya](https://github.com/Moya/Moya) 🖤🖤🖤) allowing you not to worry about the data mapping layer and just use your requests. The Codable protocol is used for JSON data mapping, all that is needed is to comply with this protocol and specify the type!
+MoyaNC is an abstraction over abstraction (thanks to [Moya](https://github.com/Moya/Moya) 🖤🖤🖤) allowing you not to worry about the data mapping layer and just use your requests. The Codable protocol is used for JSON data mapping, all that is needed is to comply with this protocol and specify the type! In addition, there is the ability to easily and simply cache any requests.
 
 ## Example
 
@@ -40,7 +40,38 @@ client.request(.zen) { (result: Result<Test>) in
 ```
 That's a basic example. Many API requests need parameters.
 
-## FutureResult
+## Extensions
+
+Moya provides extensions for:
+- [**Cache**](https://github.com/hyperoslo/Cache): Allows you to cache request data using a flexible caching policy. 
+Need to add `pod 'MoyaNetworkClient/Cache'` to the Podfile.
+- **FutureResult**: A Future is used to retrieve the result of a concurrent, asynchronous operation. It is a key building block in asynchronous, non-blocking code. 
+Need to add `pod 'MoyaNetworkClient/Future'` to the Podfile.
+
+### Cache
+
+A simple example to use caching requests:
+
+Definition of caching at the API level:
+```swift
+enum TestAPI {
+    case .zen
+}
+
+extension TestAPI: MoyaTargetType {
+    var cachePolicy: MoyaCachePolicy {
+        return .returnCacheDataElseLoad
+    }
+}
+```
+Definition of caching at the request level:
+```swift
+client = DefaultMoyaNetworkClient()
+
+client.request(.zen, cache: .returnCacheDataElseLoad)
+```
+
+### FutureResult
 
 Here is an example of the kinds of complex logic possible with Futures:
 
@@ -49,9 +80,9 @@ client = DefaultMoyaNetworkClient()
 
 // type 'Test' must be Codable
 client.request(.zen)
-	.observeSuccess { (test: Test) in /* do something with the finished object */ }
-	.observeError { error in /* do something with error */) }
-	.execute()
+    .observeSuccess { (test: Test) in /* do something with the finished object */ }
+    .observeError { error in /* do something with error */) }
+    .execute()
 ```
 
 ## Installation
