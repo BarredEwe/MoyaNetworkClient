@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MoyaNetworkClient'
-  s.version          = '0.5.0'
+  s.version          = '0.5.1'
   s.summary          = 'MoyaNetworkClient pod.'
 
 # This description is used to generate tags and improve search results.
@@ -36,13 +36,13 @@ TODO: Add long description of the pod here.
 
   s.subspec 'Cache' do |cache|
     cache.source_files = 'MoyaNetworkClient/Classes/Cache/**/*'
-    cache.dependency "MoyaNetworkClient/Core"
-    cache.dependency "Cache"
+    cache.dependency 'MoyaNetworkClient/Core'
+    cache.dependency 'Cache'
   end
 
   s.subspec 'Future' do |future|
     future.source_files = 'MoyaNetworkClient/Classes/Future/**/*'
-    future.dependency "MoyaNetworkClient/Core"
+    future.dependency 'MoyaNetworkClient/Core'
   end
 
 end

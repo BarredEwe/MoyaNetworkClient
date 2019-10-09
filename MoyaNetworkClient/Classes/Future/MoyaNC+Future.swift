@@ -21,19 +21,26 @@ extension MoyaNetworkClient {
     #if canImport(Cache)
     @discardableResult
     public func request<Value: Codable>(_ target: BaseTargetType, cachePolicy: MoyaCachePolicy) -> FutureResult<Value> {
-        guard getCache(for: target) != nil else { return request(target) }
+        guard getCache(for: target) != nil else {
+            return FutureResult<Value> { completion in
+                self.providerRequest(target, cachePolicy: cachePolicy) { (result: Result<Value>) in
+                    switch result {
+                    case let .success(value): completion(.success(value))
+                    case let .failure(error): completion(.failure(error))
+                    }
+                }
+            }
+        }
         return FutureResult<Value> { completion in
             let resultCompletion = { (result: Result<Value>) in
                 switch result {
-                    case let .success(value): completion(.success(value))
-                    case let .failure(error): completion(.failure(error))
+                case let .success(value): completion(.success(value))
+                case let .failure(error): completion(.failure(error))
                 }
             }
-            if self.processCache(target, cachePolicy: cachePolicy, resultCompletion) == nil {
-                self.providerRequest(target, resultCompletion)
-            }
+            guard self.processCache(target, cachePolicy: cachePolicy, resultCompletion) == nil else { return }
+            self.providerRequest(target, resultCompletion)
         }
     }
     #endif
 }
-
