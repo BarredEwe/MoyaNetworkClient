@@ -13,8 +13,8 @@ Simple Swift Requests
 <a href="https://developer.apple.com/"><img alt="Platform" src="https://img.shields.io/badge/platform-iOS-green.svg"/></a>
 <a href="https://www.codefactor.io/repository/github/barredewe/moyanetworkclient"><img src="https://www.codefactor.io/repository/github/barredewe/moyanetworkclient/badge" alt="CodeFactor" /></a>
 <a href="https://travis-ci.com/BarredEwe/MoyaNetworkClient"><img src="https://travis-ci.com/BarredEwe/MoyaNetworkClient.svg?branch=master" alt="CodeFactor" /></a>
+<a href="https://github.com/apple/swift-package-manage"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="Swift Package Manager" /></a>
 </p>
-
 ---
 
 ## Introduction
@@ -98,6 +98,16 @@ Then run `pod install`.
 
 In any file you'd like to use Moya in, don't forget to
 import the framework with `import MoyaNetworkClient`.
+
+### Swift Package Manager
+
+To integrate using Apple's Swift package manager, add the following as a dependency to your `Package.swift`:
+
+```swift
+.package(url: "https://github.com/BarredEwe/MoyaNetworkClient.git", .upToNextMajor(from: "0.5.0"))
+```
+
+and then specify `"MoyaNetworkClient"` as a dependency of the Target in which you wish to use MoyaNetworkClient.
 
 ## Author
 
