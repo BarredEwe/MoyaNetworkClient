@@ -1,4 +1,7 @@
 import Moya
+#if !COCOAPODS
+import MoyaNetworkClient
+#endif
 
 extension MoyaNetworkClient {
 
@@ -8,7 +11,7 @@ extension MoyaNetworkClient {
         return request(target, cachePolicy: target.cachePolicy)
         #else
         return FutureResult<Value> { completion in
-            self.providerRequest(target) { (result: Result<Value>) in
+            self.request(target) { (result: Result<Value>) in
                 switch result {
                 case let .success(value): completion(.success(value))
                 case let .failure(error): completion(.failure(error))

@@ -6,6 +6,7 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
+import Foundation
 import Moya
 import MoyaNetworkClient
 
@@ -57,10 +58,10 @@ extension NewsAPI: MoyaTargetType {
         }
     }
 
-    var cachePolicy: MoyaCachePolicy {
-        switch self {
-        case .catFacts: return .returnCacheDataElseLoad
-        case .dogFacts: return .returnCacheDataElseLoad
-        }
-    }
+    //var cachePolicy: MoyaCachePolicy {
+    //    switch self {
+    //    case .catFacts: return .returnCacheDataElseLoad
+    //    case .dogFacts: return .returnCacheDataElseLoad
+    //    }
+    //}
 }

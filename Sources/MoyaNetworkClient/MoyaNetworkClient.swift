@@ -4,14 +4,9 @@ import Foundation
 public typealias Result<Success> = Swift.Result<Success, Error>
 public typealias Completion<Value> = (Result<Value>) -> Void
 
+@available(*, deprecated, renamed: "DefaultMoyaNC")
 public typealias DefaultMoyaNetworkClient = MoyaNetworkClient<MoyaNCError>
-
-internal class SimpleCancellable: Cancellable {
-    var isCancelled = false
-    func cancel() {
-        isCancelled = true
-    }
-}
+public typealias DefaultMoyaNC = MoyaNetworkClient<MoyaNCError>
 
 public class MoyaNetworkClient<ErrorType: Error & Decodable> {
 

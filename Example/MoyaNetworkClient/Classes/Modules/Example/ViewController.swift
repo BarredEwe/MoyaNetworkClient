@@ -8,12 +8,13 @@
 
 import UIKit
 import MoyaNetworkClient
+import MoyaNetworkClient_Future
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    private let networkCLient = DefaultMoyaNetworkClient()
+    private let networkCLient = DefaultMoyaNC()
     private let dateFormatter = DateFormatter()
     private var facts = [Fact]()
 
@@ -36,7 +37,7 @@ class ViewController: UIViewController {
     }
 
     private func getAnimalFactsUseFutureRequestChain() {
-        networkCLient.request(NewsAPI.catFacts, cachePolicy: .reloadIgnoringCacheData)
+        networkCLient.request(NewsAPI.catFacts)//, cachePolicy: .reloadIgnoringCacheData)
             .flatMapSuccess { [weak self] (facts: [Fact]) -> FutureResult<[Fact]>? in
                 self?.facts.append(contentsOf: facts)
                 return self?.networkCLient.request(NewsAPI.dogFacts)
