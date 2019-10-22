@@ -1,6 +1,6 @@
 import Foundation
 #if !COCOAPODS
-import MoyaNetworkClient
+    import MoyaNC
 #endif
 
 public typealias FutureResult<Value> = Future<Result<Value>>

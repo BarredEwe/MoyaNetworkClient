@@ -1,9 +1,9 @@
 import Moya
 #if !COCOAPODS
-import MoyaNetworkClient
+    import MoyaNC
 #endif
 
-extension MoyaNetworkClient {
+extension MoyaNC {
 
     @discardableResult
     public func request<Value: Codable>(_ target: BaseTargetType) -> FutureResult<Value> {

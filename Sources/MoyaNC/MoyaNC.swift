@@ -4,11 +4,15 @@ import Foundation
 public typealias Result<Success> = Swift.Result<Success, Error>
 public typealias Completion<Value> = (Result<Value>) -> Void
 
-@available(*, deprecated, renamed: "DefaultMoyaNC")
-public typealias DefaultMoyaNetworkClient = MoyaNetworkClient<MoyaNCError>
-public typealias DefaultMoyaNC = MoyaNetworkClient<MoyaNCError>
+public typealias DefaultMoyaNC = MoyaNC<MoyaNCError>
 
-public class MoyaNetworkClient<ErrorType: Error & Decodable> {
+@available(*, deprecated, renamed: "DefaultMoyaNC")
+public typealias DefaultMoyaNetworkClient = MoyaNC<MoyaNCError>
+
+@available(*, deprecated, renamed: "MoyaNC")
+public class MoyaNetworkClient<ErrorType: Error & Decodable>: MoyaNC<ErrorType> { }
+
+public class MoyaNC<ErrorType: Error & Decodable> {
 
     internal var jsonDecoder: JSONDecoder
     internal var provider: MoyaProvider<MultiTarget>

@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3EDBEF26235EE12800D6F7F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDBEEF9235EDE0900D6F7F9 /* ViewController.swift */; };
-		3EDBEF27235EE12B00D6F7F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EDBEEFA235EDE0900D6F7F9 /* LaunchScreen.xib */; };
-		3EDBEF28235EE12E00D6F7F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDBEEFC235EDE0900D6F7F9 /* Main.storyboard */; };
-		3EDBEF29235EE13200D6F7F9 /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDBEEFF235EDE0900D6F7F9 /* FactTableViewCell.swift */; };
-		3EDBEF2A235EE13400D6F7F9 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDBEF01235EDE0900D6F7F9 /* Fact.swift */; };
-		3EDBEF2B235EE13700D6F7F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDBEF02235EDE0900D6F7F9 /* AppDelegate.swift */; };
-		3EDBEF2C235EE13A00D6F7F9 /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDBEF03235EDE0900D6F7F9 /* NewsAPI.swift */; };
-		3EDBEF2E235EE17800D6F7F9 /* MoyaNetworkClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MoyaNetworkClient::MoyaNetworkClient::Product" /* MoyaNetworkClient.framework */; };
-		3EDBEF2F235EE17800D6F7F9 /* MoyaNetworkClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "MoyaNetworkClient::MoyaNetworkClient::Product" /* MoyaNetworkClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3EDBEF37235EE19500D6F7F9 /* MoyaNetworkClient_Future.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MoyaNetworkClient::MoyaNetworkClient+Future::Product" /* MoyaNetworkClient_Future.framework */; };
-		3EDBEF38235EE19500D6F7F9 /* MoyaNetworkClient_Future.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "MoyaNetworkClient::MoyaNetworkClient+Future::Product" /* MoyaNetworkClient_Future.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3EF9FB43235F0899009DCC8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9FB3B235F0831009DCC8D /* AppDelegate.swift */; };
+		3EF9FB44235F089C009DCC8D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9FB39235F0831009DCC8D /* LaunchScreen.xib */; };
+		3EF9FB45235F08A0009DCC8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9FB36235F0831009DCC8D /* ViewController.swift */; };
+		3EF9FB46235F08A4009DCC8D /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9FB38235F0831009DCC8D /* FactTableViewCell.swift */; };
+		3EF9FB47235F08A9009DCC8D /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9FB33235F0831009DCC8D /* NewsAPI.swift */; };
+		3EF9FB48235F08AE009DCC8D /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9FB2F235F0831009DCC8D /* Fact.swift */; };
+		3EF9FB49235F08B1009DCC8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9FB30235F0831009DCC8D /* Main.storyboard */; };
+		3EF9FB4B235F08E0009DCC8D /* FutureMoyaNC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MoyaNC::FutureMoyaNC::Product" /* FutureMoyaNC.framework */; };
+		3EF9FB4C235F08E0009DCC8D /* FutureMoyaNC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "MoyaNC::FutureMoyaNC::Product" /* FutureMoyaNC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3EF9FB4F235F08E0009DCC8D /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya::Moya::Product" /* Moya.framework */; };
+		3EF9FB50235F08E0009DCC8D /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya::Moya::Product" /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3EF9FB53235F08E0009DCC8D /* MoyaNC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MoyaNC::MoyaNC::Product" /* MoyaNC.framework */; };
+		3EF9FB54235F08E0009DCC8D /* MoyaNC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "MoyaNC::MoyaNC::Product" /* MoyaNC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		OBJ_100 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* ParameterEncoding.swift */; };
 		OBJ_101 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* Request.swift */; };
 		OBJ_102 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* Response.swift */; };
@@ -30,46 +32,46 @@
 		OBJ_109 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* Timeline.swift */; };
 		OBJ_110 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* Validation.swift */; };
 		OBJ_117 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Package.swift */; };
-		OBJ_123 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* AnyEncodable.swift */; };
-		OBJ_124 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Cancellable.swift */; };
-		OBJ_125 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Endpoint.swift */; };
-		OBJ_126 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Image.swift */; };
-		OBJ_127 /* Moya+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Moya+Alamofire.swift */; };
-		OBJ_128 /* MoyaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* MoyaError.swift */; };
-		OBJ_129 /* MoyaProvider+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* MoyaProvider+Defaults.swift */; };
-		OBJ_130 /* MoyaProvider+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* MoyaProvider+Internal.swift */; };
-		OBJ_131 /* MoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* MoyaProvider.swift */; };
-		OBJ_132 /* MultiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* MultiTarget.swift */; };
-		OBJ_133 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* MultipartFormData.swift */; };
-		OBJ_134 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Plugin.swift */; };
-		OBJ_135 /* AccessTokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* AccessTokenPlugin.swift */; };
-		OBJ_136 /* CredentialsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* CredentialsPlugin.swift */; };
-		OBJ_137 /* NetworkActivityPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* NetworkActivityPlugin.swift */; };
-		OBJ_138 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* NetworkLoggerPlugin.swift */; };
-		OBJ_139 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Response.swift */; };
-		OBJ_140 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* TargetType.swift */; };
-		OBJ_141 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Task.swift */; };
-		OBJ_142 /* URL+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* URL+Moya.swift */; };
-		OBJ_143 /* URLRequest+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* URLRequest+Encoding.swift */; };
-		OBJ_144 /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* ValidationType.swift */; };
-		OBJ_146 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
-		OBJ_147 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
-		OBJ_156 /* MoyaNCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* MoyaNCError.swift */; };
-		OBJ_157 /* None.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* None.swift */; };
-		OBJ_158 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Request.swift */; };
-		OBJ_159 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Route.swift */; };
-		OBJ_160 /* MoyaNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* MoyaNetworkClient.swift */; };
-		OBJ_161 /* MoyaTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* MoyaTargetType.swift */; };
-		OBJ_163 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya::Moya::Product" /* Moya.framework */; };
-		OBJ_164 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
-		OBJ_165 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
-		OBJ_174 /* Future+Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Future+Result.swift */; };
-		OBJ_175 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Future.swift */; };
-		OBJ_176 /* MoyaNC+Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* MoyaNC+Future.swift */; };
-		OBJ_178 /* MoyaNetworkClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MoyaNetworkClient::MoyaNetworkClient::Product" /* MoyaNetworkClient.framework */; };
-		OBJ_179 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya::Moya::Product" /* Moya.framework */; };
-		OBJ_180 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
-		OBJ_181 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
+		OBJ_123 /* Future+Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Future+Result.swift */; };
+		OBJ_124 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Future.swift */; };
+		OBJ_125 /* MoyaNC+Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* MoyaNC+Future.swift */; };
+		OBJ_127 /* MoyaNC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "MoyaNC::MoyaNC::Product" /* MoyaNC.framework */; };
+		OBJ_128 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya::Moya::Product" /* Moya.framework */; };
+		OBJ_129 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
+		OBJ_130 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
+		OBJ_142 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* AnyEncodable.swift */; };
+		OBJ_143 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Cancellable.swift */; };
+		OBJ_144 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Endpoint.swift */; };
+		OBJ_145 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Image.swift */; };
+		OBJ_146 /* Moya+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Moya+Alamofire.swift */; };
+		OBJ_147 /* MoyaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* MoyaError.swift */; };
+		OBJ_148 /* MoyaProvider+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* MoyaProvider+Defaults.swift */; };
+		OBJ_149 /* MoyaProvider+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* MoyaProvider+Internal.swift */; };
+		OBJ_150 /* MoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* MoyaProvider.swift */; };
+		OBJ_151 /* MultiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* MultiTarget.swift */; };
+		OBJ_152 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* MultipartFormData.swift */; };
+		OBJ_153 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Plugin.swift */; };
+		OBJ_154 /* AccessTokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* AccessTokenPlugin.swift */; };
+		OBJ_155 /* CredentialsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* CredentialsPlugin.swift */; };
+		OBJ_156 /* NetworkActivityPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* NetworkActivityPlugin.swift */; };
+		OBJ_157 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* NetworkLoggerPlugin.swift */; };
+		OBJ_158 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Response.swift */; };
+		OBJ_159 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* TargetType.swift */; };
+		OBJ_160 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Task.swift */; };
+		OBJ_161 /* URL+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* URL+Moya.swift */; };
+		OBJ_162 /* URLRequest+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* URLRequest+Encoding.swift */; };
+		OBJ_163 /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* ValidationType.swift */; };
+		OBJ_165 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
+		OBJ_166 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
+		OBJ_173 /* MoyaNCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* MoyaNCError.swift */; };
+		OBJ_174 /* None.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* None.swift */; };
+		OBJ_175 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Request.swift */; };
+		OBJ_176 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Route.swift */; };
+		OBJ_177 /* MoyaNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* MoyaNC.swift */; };
+		OBJ_178 /* MoyaTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* MoyaTargetType.swift */; };
+		OBJ_180 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Moya::Moya::Product" /* Moya.framework */; };
+		OBJ_181 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Result::Result::Product" /* Result.framework */; };
+		OBJ_182 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
 		OBJ_191 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_197 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Package.swift */; };
 		OBJ_202 /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* AnyError.swift */; };
@@ -86,94 +88,102 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3EDBEED5235EDC1500D6F7F9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "MoyaNetworkClient::MoyaNetworkClient";
-			remoteInfo = MoyaNetworkClient;
-		};
-		3EDBEED6235EDC1500D6F7F9 /* PBXContainerItemProxy */ = {
+		3EF9FB0A235F0468009DCC8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Moya::Moya";
 			remoteInfo = Moya;
 		};
-		3EDBEED7235EDC1500D6F7F9 /* PBXContainerItemProxy */ = {
+		3EF9FB0B235F0468009DCC8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Result::Result";
 			remoteInfo = Result;
 		};
-		3EDBEED8235EDC1500D6F7F9 /* PBXContainerItemProxy */ = {
+		3EF9FB0C235F0468009DCC8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Alamofire::Alamofire";
 			remoteInfo = Alamofire;
 		};
-		3EDBEED9235EDC1500D6F7F9 /* PBXContainerItemProxy */ = {
+		3EF9FB0D235F0468009DCC8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Result::Result";
 			remoteInfo = Result;
 		};
-		3EDBEEDA235EDC1500D6F7F9 /* PBXContainerItemProxy */ = {
+		3EF9FB0E235F0468009DCC8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Alamofire::Alamofire";
 			remoteInfo = Alamofire;
 		};
-		3EDBEEDB235EDC1500D6F7F9 /* PBXContainerItemProxy */ = {
+		3EF9FB0F235F0468009DCC8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "MoyaNC::MoyaNC";
+			remoteInfo = MoyaNC;
+		};
+		3EF9FB10235F0468009DCC8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Moya::Moya";
 			remoteInfo = Moya;
 		};
-		3EDBEEDC235EDC1500D6F7F9 /* PBXContainerItemProxy */ = {
+		3EF9FB11235F0468009DCC8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Result::Result";
 			remoteInfo = Result;
 		};
-		3EDBEEDD235EDC1500D6F7F9 /* PBXContainerItemProxy */ = {
+		3EF9FB12235F0468009DCC8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Alamofire::Alamofire";
 			remoteInfo = Alamofire;
 		};
-		3EDBEF30235EE17800D6F7F9 /* PBXContainerItemProxy */ = {
+		3EF9FB4D235F08E0009DCC8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "MoyaNetworkClient::MoyaNetworkClient";
-			remoteInfo = MoyaNetworkClient;
+			remoteGlobalIDString = "MoyaNC::FutureMoyaNC";
+			remoteInfo = FutureMoyaNC;
 		};
-		3EDBEF39235EE19500D6F7F9 /* PBXContainerItemProxy */ = {
+		3EF9FB51235F08E0009DCC8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "MoyaNetworkClient::MoyaNetworkClient+Future";
-			remoteInfo = "MoyaNetworkClient+Future";
+			remoteGlobalIDString = "Moya::Moya";
+			remoteInfo = Moya;
+		};
+		3EF9FB55235F08E0009DCC8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "MoyaNC::MoyaNC";
+			remoteInfo = MoyaNC;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3EDBEF32235EE17800D6F7F9 /* Embed Frameworks */ = {
+		3EF9FB57235F08E0009DCC8D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3EDBEF38235EE19500D6F7F9 /* MoyaNetworkClient_Future.framework in Embed Frameworks */,
-				3EDBEF2F235EE17800D6F7F9 /* MoyaNetworkClient.framework in Embed Frameworks */,
+				3EF9FB54235F08E0009DCC8D /* MoyaNC.framework in Embed Frameworks */,
+				3EF9FB50235F08E0009DCC8D /* Moya.framework in Embed Frameworks */,
+				3EF9FB4C235F08E0009DCC8D /* FutureMoyaNC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,28 +191,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3EDBEEF9235EDE0900D6F7F9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3EDBEEFB235EDE0900D6F7F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3EDBEEFD235EDE0900D6F7F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3EDBEEFF235EDE0900D6F7F9 /* FactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
-		3EDBEF01235EDE0900D6F7F9 /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
-		3EDBEF02235EDE0900D6F7F9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3EDBEF03235EDE0900D6F7F9 /* NewsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
-		3EDBEF04235EDE0900D6F7F9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EDBEF12235EE0D800D6F7F9 /* MoyaNetworkClient-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MoyaNetworkClient-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EF9FB17235F080D009DCC8D /* MoyaNC-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MoyaNC-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EF9FB2F235F0831009DCC8D /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		3EF9FB31235F0831009DCC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3EF9FB33235F0831009DCC8D /* NewsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
+		3EF9FB36235F0831009DCC8D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3EF9FB38235F0831009DCC8D /* FactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
+		3EF9FB3A235F0831009DCC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3EF9FB3B235F0831009DCC8D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3EF9FB3C235F0831009DCC8D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		"Alamofire::Alamofire::Product" /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Moya::Moya::Product" /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"MoyaNetworkClient::MoyaNetworkClient+Future::Product" /* MoyaNetworkClient_Future.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoyaNetworkClient_Future.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"MoyaNetworkClient::MoyaNetworkClient::Product" /* MoyaNetworkClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoyaNetworkClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_10 /* MoyaNCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaNCError.swift; sourceTree = "<group>"; };
-		OBJ_11 /* None.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = None.swift; sourceTree = "<group>"; };
-		OBJ_12 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		OBJ_13 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		OBJ_14 /* MoyaNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaNetworkClient.swift; sourceTree = "<group>"; };
-		OBJ_16 /* MoyaTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaTargetType.swift; sourceTree = "<group>"; };
-		OBJ_18 /* Future+Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future+Result.swift"; sourceTree = "<group>"; };
-		OBJ_19 /* Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
-		OBJ_20 /* MoyaNC+Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaNC+Future.swift"; sourceTree = "<group>"; };
+		"MoyaNC::FutureMoyaNC::Product" /* FutureMoyaNC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FutureMoyaNC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"MoyaNC::MoyaNC::Product" /* MoyaNC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoyaNC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
+		OBJ_11 /* MoyaNC+Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaNC+Future.swift"; sourceTree = "<group>"; };
+		OBJ_14 /* MoyaNCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaNCError.swift; sourceTree = "<group>"; };
+		OBJ_15 /* None.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = None.swift; sourceTree = "<group>"; };
+		OBJ_16 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		OBJ_17 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		OBJ_18 /* MoyaNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaNC.swift; sourceTree = "<group>"; };
+		OBJ_20 /* MoyaTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaTargetType.swift; sourceTree = "<group>"; };
 		OBJ_25 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
 		OBJ_26 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		OBJ_27 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -255,16 +264,18 @@
 		OBJ_86 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_87 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_88 /* MoyaNetworkClient.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MoyaNetworkClient.podspec; sourceTree = "<group>"; };
+		OBJ_9 /* Future+Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future+Result.swift"; sourceTree = "<group>"; };
 		"Result::Result::Product" /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3EDBEF0F235EE0D800D6F7F9 /* Frameworks */ = {
+		3EF9FB14235F080D009DCC8D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EDBEF37235EE19500D6F7F9 /* MoyaNetworkClient_Future.framework in Frameworks */,
-				3EDBEF2E235EE17800D6F7F9 /* MoyaNetworkClient.framework in Frameworks */,
+				3EF9FB53235F08E0009DCC8D /* MoyaNC.framework in Frameworks */,
+				3EF9FB4F235F08E0009DCC8D /* Moya.framework in Frameworks */,
+				3EF9FB4B235F08E0009DCC8D /* FutureMoyaNC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,33 +286,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_145 /* Frameworks */ = {
+		OBJ_126 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_146 /* Result.framework in Frameworks */,
-				OBJ_147 /* Alamofire.framework in Frameworks */,
+				OBJ_127 /* MoyaNC.framework in Frameworks */,
+				OBJ_128 /* Moya.framework in Frameworks */,
+				OBJ_129 /* Result.framework in Frameworks */,
+				OBJ_130 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_162 /* Frameworks */ = {
+		OBJ_164 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_163 /* Moya.framework in Frameworks */,
-				OBJ_164 /* Result.framework in Frameworks */,
-				OBJ_165 /* Alamofire.framework in Frameworks */,
+				OBJ_165 /* Result.framework in Frameworks */,
+				OBJ_166 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_177 /* Frameworks */ = {
+		OBJ_179 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_178 /* MoyaNetworkClient.framework in Frameworks */,
-				OBJ_179 /* Moya.framework in Frameworks */,
-				OBJ_180 /* Result.framework in Frameworks */,
-				OBJ_181 /* Alamofire.framework in Frameworks */,
+				OBJ_180 /* Moya.framework in Frameworks */,
+				OBJ_181 /* Result.framework in Frameworks */,
+				OBJ_182 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,102 +326,113 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3EDBEEF7235EDE0900D6F7F9 /* Example */ = {
+		3EF9FB2B235F0831009DCC8D /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				3EDBEEF8235EDE0900D6F7F9 /* MoyaNetworkClient */,
+				3EF9FB2C235F0831009DCC8D /* MoyaNC */,
 			);
 			path = Example;
 			sourceTree = "<group>";
 		};
-		3EDBEEF8235EDE0900D6F7F9 /* MoyaNetworkClient */ = {
+		3EF9FB2C235F0831009DCC8D /* MoyaNC */ = {
 			isa = PBXGroup;
 			children = (
-				3EDBEF02235EDE0900D6F7F9 /* AppDelegate.swift */,
-				3EDBEF04235EDE0900D6F7F9 /* Info.plist */,
-				3EDBEEFA235EDE0900D6F7F9 /* LaunchScreen.xib */,
-				3EDBEF3B235EE26F00D6F7F9 /* Classes */,
+				3EF9FB2D235F0831009DCC8D /* Classes */,
+				3EF9FB39235F0831009DCC8D /* LaunchScreen.xib */,
+				3EF9FB3B235F0831009DCC8D /* AppDelegate.swift */,
+				3EF9FB3C235F0831009DCC8D /* Info.plist */,
 			);
-			path = MoyaNetworkClient;
+			path = MoyaNC;
 			sourceTree = "<group>";
 		};
-		3EDBEEFE235EDE0900D6F7F9 /* Cell */ = {
+		3EF9FB2D235F0831009DCC8D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3EDBEEFF235EDE0900D6F7F9 /* FactTableViewCell.swift */,
+				3EF9FB30235F0831009DCC8D /* Main.storyboard */,
+				3EF9FB2E235F0831009DCC8D /* Models */,
+				3EF9FB32235F0831009DCC8D /* API */,
+				3EF9FB34235F0831009DCC8D /* Modules */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3EF9FB2E235F0831009DCC8D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3EF9FB2F235F0831009DCC8D /* Fact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3EF9FB32235F0831009DCC8D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3EF9FB33235F0831009DCC8D /* NewsAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3EF9FB34235F0831009DCC8D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3EF9FB35235F0831009DCC8D /* Example */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3EF9FB35235F0831009DCC8D /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				3EF9FB36235F0831009DCC8D /* ViewController.swift */,
+				3EF9FB37235F0831009DCC8D /* Cell */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		3EF9FB37235F0831009DCC8D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3EF9FB38235F0831009DCC8D /* FactTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		3EDBEF2D235EE17800D6F7F9 /* Frameworks */ = {
+		3EF9FB4A235F08E0009DCC8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3EDBEF3B235EE26F00D6F7F9 /* Classes */ = {
+		OBJ_12 /* MoyaNC */ = {
 			isa = PBXGroup;
 			children = (
-				3EDBEF3C235EE28C00D6F7F9 /* Modules */,
-				3EDBEF3F235EE2D000D6F7F9 /* Models */,
-				3EDBEF3E235EE2C700D6F7F9 /* API */,
-				3EDBEEFC235EDE0900D6F7F9 /* Main.storyboard */,
+				OBJ_13 /* Models */,
+				OBJ_19 /* Protocols */,
+				OBJ_18 /* MoyaNC.swift */,
 			);
-			path = Classes;
-			sourceTree = "<group>";
+			name = MoyaNC;
+			path = Sources/MoyaNC;
+			sourceTree = SOURCE_ROOT;
 		};
-		3EDBEF3C235EE28C00D6F7F9 /* Modules */ = {
+		OBJ_13 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3EDBEF3D235EE29600D6F7F9 /* Example */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		3EDBEF3D235EE29600D6F7F9 /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				3EDBEEFE235EDE0900D6F7F9 /* Cell */,
-				3EDBEEF9235EDE0900D6F7F9 /* ViewController.swift */,
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
-		3EDBEF3E235EE2C700D6F7F9 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				3EDBEF03235EDE0900D6F7F9 /* NewsAPI.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		3EDBEF3F235EE2D000D6F7F9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				3EDBEF01235EDE0900D6F7F9 /* Fact.swift */,
+				OBJ_14 /* MoyaNCError.swift */,
+				OBJ_15 /* None.swift */,
+				OBJ_16 /* Request.swift */,
+				OBJ_17 /* Route.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		OBJ_15 /* Protocols */ = {
+		OBJ_19 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_16 /* MoyaTargetType.swift */,
+				OBJ_20 /* MoyaTargetType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
-		};
-		OBJ_17 /* MoyaNetworkClient+Future */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_18 /* Future+Result.swift */,
-				OBJ_19 /* Future.swift */,
-				OBJ_20 /* MoyaNC+Future.swift */,
-			);
-			name = "MoyaNetworkClient+Future";
-			path = "Sources/MoyaNetworkClient+Future";
-			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_21 /* Tests */ = {
 			isa = PBXGroup;
@@ -494,23 +516,22 @@
 			path = .build/checkouts/Moya/Sources/RxMoya;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
+				3EF9FB2B235F0831009DCC8D /* Example */,
 				OBJ_21 /* Tests */,
 				OBJ_22 /* Dependencies */,
 				OBJ_77 /* Products */,
-				3EDBEEF7235EDE0900D6F7F9 /* Example */,
 				OBJ_83 /* Images */,
 				OBJ_85 /* fastlane */,
 				OBJ_86 /* LICENSE */,
 				OBJ_87 /* README.md */,
 				OBJ_88 /* MoyaNetworkClient.podspec */,
-				3EDBEF2D235EE17800D6F7F9 /* Frameworks */,
+				3EF9FB4A235F08E0009DCC8D /* Frameworks */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_51 /* Result 4.1.0 */ = {
@@ -563,8 +584,8 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* MoyaNetworkClient */,
-				OBJ_17 /* MoyaNetworkClient+Future */,
+				OBJ_8 /* FutureMoyaNC */,
+				OBJ_12 /* MoyaNC */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -572,59 +593,49 @@
 		OBJ_77 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"MoyaNetworkClient::MoyaNetworkClient+Future::Product" /* MoyaNetworkClient_Future.framework */,
-				"Moya::Moya::Product" /* Moya.framework */,
 				"Alamofire::Alamofire::Product" /* Alamofire.framework */,
+				"Moya::Moya::Product" /* Moya.framework */,
+				"MoyaNC::MoyaNC::Product" /* MoyaNC.framework */,
 				"Result::Result::Product" /* Result.framework */,
-				"MoyaNetworkClient::MoyaNetworkClient::Product" /* MoyaNetworkClient.framework */,
-				3EDBEF12235EE0D800D6F7F9 /* MoyaNetworkClient-Example.app */,
+				"MoyaNC::FutureMoyaNC::Product" /* FutureMoyaNC.framework */,
+				3EF9FB17235F080D009DCC8D /* MoyaNC-Example.app */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_8 /* MoyaNetworkClient */ = {
+		OBJ_8 /* FutureMoyaNC */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* Models */,
-				OBJ_14 /* MoyaNetworkClient.swift */,
-				OBJ_15 /* Protocols */,
+				OBJ_10 /* Future.swift */,
+				OBJ_9 /* Future+Result.swift */,
+				OBJ_11 /* MoyaNC+Future.swift */,
 			);
-			name = MoyaNetworkClient;
-			path = Sources/MoyaNetworkClient;
+			name = FutureMoyaNC;
+			path = Sources/FutureMoyaNC;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_10 /* MoyaNCError.swift */,
-				OBJ_11 /* None.swift */,
-				OBJ_12 /* Request.swift */,
-				OBJ_13 /* Route.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3EDBEF11235EE0D800D6F7F9 /* MoyaNetworkClient-Example */ = {
+		3EF9FB16235F080D009DCC8D /* MoyaNC-Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3EDBEF23235EE0D800D6F7F9 /* Build configuration list for PBXNativeTarget "MoyaNetworkClient-Example" */;
+			buildConfigurationList = 3EF9FB28235F080D009DCC8D /* Build configuration list for PBXNativeTarget "MoyaNC-Example" */;
 			buildPhases = (
-				3EDBEF0E235EE0D800D6F7F9 /* Sources */,
-				3EDBEF0F235EE0D800D6F7F9 /* Frameworks */,
-				3EDBEF10235EE0D800D6F7F9 /* Resources */,
-				3EDBEF32235EE17800D6F7F9 /* Embed Frameworks */,
+				3EF9FB13235F080D009DCC8D /* Sources */,
+				3EF9FB14235F080D009DCC8D /* Frameworks */,
+				3EF9FB15235F080D009DCC8D /* Resources */,
+				3EF9FB57235F08E0009DCC8D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3EDBEF31235EE17800D6F7F9 /* PBXTargetDependency */,
-				3EDBEF3A235EE19500D6F7F9 /* PBXTargetDependency */,
+				3EF9FB4E235F08E0009DCC8D /* PBXTargetDependency */,
+				3EF9FB52235F08E0009DCC8D /* PBXTargetDependency */,
+				3EF9FB56235F08E0009DCC8D /* PBXTargetDependency */,
 			);
-			name = "MoyaNetworkClient-Example";
-			productName = "MoyaNetworkClient-Example";
-			productReference = 3EDBEF12235EE0D800D6F7F9 /* MoyaNetworkClient-Example.app */;
+			name = "MoyaNC-Example";
+			productName = "MoyaNC-Example";
+			productReference = 3EF9FB17235F080D009DCC8D /* MoyaNC-Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		"Alamofire::Alamofire" /* Alamofire */ = {
@@ -659,16 +670,16 @@
 		};
 		"Moya::Moya" /* Moya */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_119 /* Build configuration list for PBXNativeTarget "Moya" */;
+			buildConfigurationList = OBJ_138 /* Build configuration list for PBXNativeTarget "Moya" */;
 			buildPhases = (
-				OBJ_122 /* Sources */,
-				OBJ_145 /* Frameworks */,
+				OBJ_141 /* Sources */,
+				OBJ_164 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_148 /* PBXTargetDependency */,
-				OBJ_150 /* PBXTargetDependency */,
+				OBJ_167 /* PBXTargetDependency */,
+				OBJ_168 /* PBXTargetDependency */,
 			);
 			name = Moya;
 			productName = Moya;
@@ -689,48 +700,48 @@
 			productName = MoyaPackageDescription;
 			productType = "com.apple.product-type.framework";
 		};
-		"MoyaNetworkClient::MoyaNetworkClient" /* MoyaNetworkClient */ = {
+		"MoyaNC::FutureMoyaNC" /* FutureMoyaNC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_152 /* Build configuration list for PBXNativeTarget "MoyaNetworkClient" */;
+			buildConfigurationList = OBJ_119 /* Build configuration list for PBXNativeTarget "FutureMoyaNC" */;
 			buildPhases = (
-				OBJ_155 /* Sources */,
-				OBJ_162 /* Frameworks */,
+				OBJ_122 /* Sources */,
+				OBJ_126 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_166 /* PBXTargetDependency */,
-				OBJ_167 /* PBXTargetDependency */,
-				OBJ_168 /* PBXTargetDependency */,
+				OBJ_131 /* PBXTargetDependency */,
+				OBJ_133 /* PBXTargetDependency */,
+				OBJ_135 /* PBXTargetDependency */,
+				OBJ_137 /* PBXTargetDependency */,
 			);
-			name = MoyaNetworkClient;
-			productName = MoyaNetworkClient;
-			productReference = "MoyaNetworkClient::MoyaNetworkClient::Product" /* MoyaNetworkClient.framework */;
+			name = FutureMoyaNC;
+			productName = FutureMoyaNC;
+			productReference = "MoyaNC::FutureMoyaNC::Product" /* FutureMoyaNC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		"MoyaNetworkClient::MoyaNetworkClient+Future" /* MoyaNetworkClient+Future */ = {
+		"MoyaNC::MoyaNC" /* MoyaNC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_170 /* Build configuration list for PBXNativeTarget "MoyaNetworkClient+Future" */;
+			buildConfigurationList = OBJ_169 /* Build configuration list for PBXNativeTarget "MoyaNC" */;
 			buildPhases = (
-				OBJ_173 /* Sources */,
-				OBJ_177 /* Frameworks */,
+				OBJ_172 /* Sources */,
+				OBJ_179 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_182 /* PBXTargetDependency */,
 				OBJ_183 /* PBXTargetDependency */,
 				OBJ_184 /* PBXTargetDependency */,
 				OBJ_185 /* PBXTargetDependency */,
 			);
-			name = "MoyaNetworkClient+Future";
-			productName = MoyaNetworkClient_Future;
-			productReference = "MoyaNetworkClient::MoyaNetworkClient+Future::Product" /* MoyaNetworkClient_Future.framework */;
+			name = MoyaNC;
+			productName = MoyaNC;
+			productReference = "MoyaNC::MoyaNC::Product" /* MoyaNC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		"MoyaNetworkClient::SwiftPMPackageDescription" /* MoyaNetworkClientPackageDescription */ = {
+		"MoyaNC::SwiftPMPackageDescription" /* MoyaNCPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_187 /* Build configuration list for PBXNativeTarget "MoyaNetworkClientPackageDescription" */;
+			buildConfigurationList = OBJ_187 /* Build configuration list for PBXNativeTarget "MoyaNCPackageDescription" */;
 			buildPhases = (
 				OBJ_190 /* Sources */,
 			);
@@ -738,8 +749,8 @@
 			);
 			dependencies = (
 			);
-			name = MoyaNetworkClientPackageDescription;
-			productName = MoyaNetworkClientPackageDescription;
+			name = MoyaNCPackageDescription;
+			productName = MoyaNCPackageDescription;
 			productType = "com.apple.product-type.framework";
 		};
 		"Result::Result" /* Result */ = {
@@ -782,13 +793,13 @@
 				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 9999;
 				TargetAttributes = {
-					3EDBEF11235EE0D800D6F7F9 = {
+					3EF9FB16235F080D009DCC8D = {
 						CreatedOnToolsVersion = 11.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "MoyaNetworkClient" */;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "MoyaNC" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -796,47 +807,47 @@
 				en,
 				Base,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_77 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				"Alamofire::Alamofire" /* Alamofire */,
 				"Alamofire::SwiftPMPackageDescription" /* AlamofirePackageDescription */,
+				"MoyaNC::FutureMoyaNC" /* FutureMoyaNC */,
 				"Moya::Moya" /* Moya */,
-				"MoyaNetworkClient::MoyaNetworkClient" /* MoyaNetworkClient */,
-				"MoyaNetworkClient::MoyaNetworkClient+Future" /* MoyaNetworkClient+Future */,
-				"MoyaNetworkClient::SwiftPMPackageDescription" /* MoyaNetworkClientPackageDescription */,
+				"MoyaNC::MoyaNC" /* MoyaNC */,
+				"MoyaNC::SwiftPMPackageDescription" /* MoyaNCPackageDescription */,
 				"Moya::SwiftPMPackageDescription" /* MoyaPackageDescription */,
 				"Result::Result" /* Result */,
 				"Result::SwiftPMPackageDescription" /* ResultPackageDescription */,
-				3EDBEF11235EE0D800D6F7F9 /* MoyaNetworkClient-Example */,
+				3EF9FB16235F080D009DCC8D /* MoyaNC-Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3EDBEF10235EE0D800D6F7F9 /* Resources */ = {
+		3EF9FB15235F080D009DCC8D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EDBEF27235EE12B00D6F7F9 /* LaunchScreen.xib in Resources */,
-				3EDBEF28235EE12E00D6F7F9 /* Main.storyboard in Resources */,
+				3EF9FB44235F089C009DCC8D /* LaunchScreen.xib in Resources */,
+				3EF9FB49235F08B1009DCC8D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3EDBEF0E235EE0D800D6F7F9 /* Sources */ = {
+		3EF9FB13235F080D009DCC8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EDBEF2B235EE13700D6F7F9 /* AppDelegate.swift in Sources */,
-				3EDBEF26235EE12800D6F7F9 /* ViewController.swift in Sources */,
-				3EDBEF2C235EE13A00D6F7F9 /* NewsAPI.swift in Sources */,
-				3EDBEF2A235EE13400D6F7F9 /* Fact.swift in Sources */,
-				3EDBEF29235EE13200D6F7F9 /* FactTableViewCell.swift in Sources */,
+				3EF9FB46235F08A4009DCC8D /* FactTableViewCell.swift in Sources */,
+				3EF9FB45235F08A0009DCC8D /* ViewController.swift in Sources */,
+				3EF9FB48235F08AE009DCC8D /* Fact.swift in Sources */,
+				3EF9FB43235F0899009DCC8D /* AppDelegate.swift in Sources */,
+				3EF9FB47235F08A9009DCC8D /* NewsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,51 +863,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_123 /* AnyEncodable.swift in Sources */,
-				OBJ_124 /* Cancellable.swift in Sources */,
-				OBJ_125 /* Endpoint.swift in Sources */,
-				OBJ_126 /* Image.swift in Sources */,
-				OBJ_127 /* Moya+Alamofire.swift in Sources */,
-				OBJ_128 /* MoyaError.swift in Sources */,
-				OBJ_129 /* MoyaProvider+Defaults.swift in Sources */,
-				OBJ_130 /* MoyaProvider+Internal.swift in Sources */,
-				OBJ_131 /* MoyaProvider.swift in Sources */,
-				OBJ_132 /* MultiTarget.swift in Sources */,
-				OBJ_133 /* MultipartFormData.swift in Sources */,
-				OBJ_134 /* Plugin.swift in Sources */,
-				OBJ_135 /* AccessTokenPlugin.swift in Sources */,
-				OBJ_136 /* CredentialsPlugin.swift in Sources */,
-				OBJ_137 /* NetworkActivityPlugin.swift in Sources */,
-				OBJ_138 /* NetworkLoggerPlugin.swift in Sources */,
-				OBJ_139 /* Response.swift in Sources */,
-				OBJ_140 /* TargetType.swift in Sources */,
-				OBJ_141 /* Task.swift in Sources */,
-				OBJ_142 /* URL+Moya.swift in Sources */,
-				OBJ_143 /* URLRequest+Encoding.swift in Sources */,
-				OBJ_144 /* ValidationType.swift in Sources */,
+				OBJ_123 /* Future+Result.swift in Sources */,
+				OBJ_124 /* Future.swift in Sources */,
+				OBJ_125 /* MoyaNC+Future.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_155 /* Sources */ = {
+		OBJ_141 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_156 /* MoyaNCError.swift in Sources */,
-				OBJ_157 /* None.swift in Sources */,
-				OBJ_158 /* Request.swift in Sources */,
-				OBJ_159 /* Route.swift in Sources */,
-				OBJ_160 /* MoyaNetworkClient.swift in Sources */,
-				OBJ_161 /* MoyaTargetType.swift in Sources */,
+				OBJ_142 /* AnyEncodable.swift in Sources */,
+				OBJ_143 /* Cancellable.swift in Sources */,
+				OBJ_144 /* Endpoint.swift in Sources */,
+				OBJ_145 /* Image.swift in Sources */,
+				OBJ_146 /* Moya+Alamofire.swift in Sources */,
+				OBJ_147 /* MoyaError.swift in Sources */,
+				OBJ_148 /* MoyaProvider+Defaults.swift in Sources */,
+				OBJ_149 /* MoyaProvider+Internal.swift in Sources */,
+				OBJ_150 /* MoyaProvider.swift in Sources */,
+				OBJ_151 /* MultiTarget.swift in Sources */,
+				OBJ_152 /* MultipartFormData.swift in Sources */,
+				OBJ_153 /* Plugin.swift in Sources */,
+				OBJ_154 /* AccessTokenPlugin.swift in Sources */,
+				OBJ_155 /* CredentialsPlugin.swift in Sources */,
+				OBJ_156 /* NetworkActivityPlugin.swift in Sources */,
+				OBJ_157 /* NetworkLoggerPlugin.swift in Sources */,
+				OBJ_158 /* Response.swift in Sources */,
+				OBJ_159 /* TargetType.swift in Sources */,
+				OBJ_160 /* Task.swift in Sources */,
+				OBJ_161 /* URL+Moya.swift in Sources */,
+				OBJ_162 /* URLRequest+Encoding.swift in Sources */,
+				OBJ_163 /* ValidationType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_173 /* Sources */ = {
+		OBJ_172 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_174 /* Future+Result.swift in Sources */,
-				OBJ_175 /* Future.swift in Sources */,
-				OBJ_176 /* MoyaNC+Future.swift in Sources */,
+				OBJ_173 /* MoyaNCError.swift in Sources */,
+				OBJ_174 /* None.swift in Sources */,
+				OBJ_175 /* Request.swift in Sources */,
+				OBJ_176 /* Route.swift in Sources */,
+				OBJ_177 /* MoyaNC.swift in Sources */,
+				OBJ_178 /* MoyaTargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,84 +973,89 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3EDBEF31235EE17800D6F7F9 /* PBXTargetDependency */ = {
+		3EF9FB4E235F08E0009DCC8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "MoyaNetworkClient::MoyaNetworkClient" /* MoyaNetworkClient */;
-			targetProxy = 3EDBEF30235EE17800D6F7F9 /* PBXContainerItemProxy */;
+			target = "MoyaNC::FutureMoyaNC" /* FutureMoyaNC */;
+			targetProxy = 3EF9FB4D235F08E0009DCC8D /* PBXContainerItemProxy */;
 		};
-		3EDBEF3A235EE19500D6F7F9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "MoyaNetworkClient::MoyaNetworkClient+Future" /* MoyaNetworkClient+Future */;
-			targetProxy = 3EDBEF39235EE19500D6F7F9 /* PBXContainerItemProxy */;
-		};
-		OBJ_148 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Result::Result" /* Result */;
-			targetProxy = 3EDBEED7235EDC1500D6F7F9 /* PBXContainerItemProxy */;
-		};
-		OBJ_150 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Alamofire::Alamofire" /* Alamofire */;
-			targetProxy = 3EDBEED8235EDC1500D6F7F9 /* PBXContainerItemProxy */;
-		};
-		OBJ_166 /* PBXTargetDependency */ = {
+		3EF9FB52235F08E0009DCC8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Moya::Moya" /* Moya */;
-			targetProxy = 3EDBEED6235EDC1500D6F7F9 /* PBXContainerItemProxy */;
+			targetProxy = 3EF9FB51235F08E0009DCC8D /* PBXContainerItemProxy */;
+		};
+		3EF9FB56235F08E0009DCC8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "MoyaNC::MoyaNC" /* MoyaNC */;
+			targetProxy = 3EF9FB55235F08E0009DCC8D /* PBXContainerItemProxy */;
+		};
+		OBJ_131 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "MoyaNC::MoyaNC" /* MoyaNC */;
+			targetProxy = 3EF9FB0F235F0468009DCC8D /* PBXContainerItemProxy */;
+		};
+		OBJ_133 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Moya::Moya" /* Moya */;
+			targetProxy = 3EF9FB10235F0468009DCC8D /* PBXContainerItemProxy */;
+		};
+		OBJ_135 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Result::Result" /* Result */;
+			targetProxy = 3EF9FB11235F0468009DCC8D /* PBXContainerItemProxy */;
+		};
+		OBJ_137 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Alamofire::Alamofire" /* Alamofire */;
+			targetProxy = 3EF9FB12235F0468009DCC8D /* PBXContainerItemProxy */;
 		};
 		OBJ_167 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Result::Result" /* Result */;
-			targetProxy = 3EDBEED9235EDC1500D6F7F9 /* PBXContainerItemProxy */;
+			targetProxy = 3EF9FB0B235F0468009DCC8D /* PBXContainerItemProxy */;
 		};
 		OBJ_168 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Alamofire::Alamofire" /* Alamofire */;
-			targetProxy = 3EDBEEDA235EDC1500D6F7F9 /* PBXContainerItemProxy */;
-		};
-		OBJ_182 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "MoyaNetworkClient::MoyaNetworkClient" /* MoyaNetworkClient */;
-			targetProxy = 3EDBEED5235EDC1500D6F7F9 /* PBXContainerItemProxy */;
+			targetProxy = 3EF9FB0C235F0468009DCC8D /* PBXContainerItemProxy */;
 		};
 		OBJ_183 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Moya::Moya" /* Moya */;
-			targetProxy = 3EDBEEDB235EDC1500D6F7F9 /* PBXContainerItemProxy */;
+			targetProxy = 3EF9FB0A235F0468009DCC8D /* PBXContainerItemProxy */;
 		};
 		OBJ_184 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Result::Result" /* Result */;
-			targetProxy = 3EDBEEDC235EDC1500D6F7F9 /* PBXContainerItemProxy */;
+			targetProxy = 3EF9FB0D235F0468009DCC8D /* PBXContainerItemProxy */;
 		};
 		OBJ_185 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Alamofire::Alamofire" /* Alamofire */;
-			targetProxy = 3EDBEEDD235EDC1500D6F7F9 /* PBXContainerItemProxy */;
+			targetProxy = 3EF9FB0E235F0468009DCC8D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3EDBEEFA235EDE0900D6F7F9 /* LaunchScreen.xib */ = {
+		3EF9FB30235F0831009DCC8D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3EDBEEFB235EDE0900D6F7F9 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		3EDBEEFC235EDE0900D6F7F9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3EDBEEFD235EDE0900D6F7F9 /* Base */,
+				3EF9FB31235F0831009DCC8D /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3EF9FB39235F0831009DCC8D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EF9FB3A235F0831009DCC8D /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3EDBEF24235EE0D800D6F7F9 /* Debug */ = {
+		3EF9FB29235F080D009DCC8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1087,12 +1103,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Example/MoyaNetworkClient/Info.plist;
+				INFOPLIST_FILE = Example/MoyaNC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.barredewe.MoyaNetworkClient-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barredewe.MoyaNC-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1101,7 +1117,7 @@
 			};
 			name = Debug;
 		};
-		3EDBEF25235EE0D800D6F7F9 /* Release */ = {
+		3EF9FB2A235F080D009DCC8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1145,12 +1161,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Example/MoyaNetworkClient/Info.plist;
+				INFOPLIST_FILE = Example/MoyaNC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.barredewe.MoyaNetworkClient-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barredewe.MoyaNC-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -1186,20 +1202,20 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MoyaNetworkClient.xcodeproj/Moya_Info.plist;
+				INFOPLIST_FILE = MoyaNC.xcodeproj/FutureMoyaNC_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Moya;
+				PRODUCT_BUNDLE_IDENTIFIER = FutureMoyaNC;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Moya;
+				TARGET_NAME = FutureMoyaNC;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1214,7 +1230,63 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MoyaNetworkClient.xcodeproj/Moya_Info.plist;
+				INFOPLIST_FILE = MoyaNC.xcodeproj/FutureMoyaNC_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = FutureMoyaNC;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = FutureMoyaNC;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_139 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MoyaNC.xcodeproj/Moya_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Moya;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Moya;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MoyaNC.xcodeproj/Moya_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1233,7 +1305,7 @@
 			};
 			name = Release;
 		};
-		OBJ_153 /* Debug */ = {
+		OBJ_170 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1242,26 +1314,26 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MoyaNetworkClient.xcodeproj/MoyaNetworkClient_Info.plist;
+				INFOPLIST_FILE = MoyaNC.xcodeproj/MoyaNC_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = MoyaNetworkClient;
+				PRODUCT_BUNDLE_IDENTIFIER = MoyaNC;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGET_NAME = MoyaNetworkClient;
+				TARGET_NAME = MoyaNC;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		OBJ_154 /* Release */ = {
+		OBJ_171 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1270,76 +1342,20 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MoyaNetworkClient.xcodeproj/MoyaNetworkClient_Info.plist;
+				INFOPLIST_FILE = MoyaNC.xcodeproj/MoyaNC_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = MoyaNetworkClient;
+				PRODUCT_BUNDLE_IDENTIFIER = MoyaNC;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGET_NAME = MoyaNetworkClient;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_171 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MoyaNetworkClient.xcodeproj/MoyaNetworkClient_Future_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "MoyaNetworkClient-Future";
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = "MoyaNetworkClient+Future";
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_172 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MoyaNetworkClient.xcodeproj/MoyaNetworkClient_Future_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "MoyaNetworkClient-Future";
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = "MoyaNetworkClient+Future";
+				TARGET_NAME = MoyaNC;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1390,7 +1406,7 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MoyaNetworkClient.xcodeproj/Result_Info.plist;
+				INFOPLIST_FILE = MoyaNC.xcodeproj/Result_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1418,7 +1434,7 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MoyaNetworkClient.xcodeproj/Result_Info.plist;
+				INFOPLIST_FILE = MoyaNC.xcodeproj/Result_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1515,7 +1531,7 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MoyaNetworkClient.xcodeproj/Alamofire_Info.plist;
+				INFOPLIST_FILE = MoyaNC.xcodeproj/Alamofire_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1543,7 +1559,7 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = MoyaNetworkClient.xcodeproj/Alamofire_Info.plist;
+				INFOPLIST_FILE = MoyaNC.xcodeproj/Alamofire_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1565,11 +1581,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3EDBEF23235EE0D800D6F7F9 /* Build configuration list for PBXNativeTarget "MoyaNetworkClient-Example" */ = {
+		3EF9FB28235F080D009DCC8D /* Build configuration list for PBXNativeTarget "MoyaNC-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3EDBEF24235EE0D800D6F7F9 /* Debug */,
-				3EDBEF25235EE0D800D6F7F9 /* Release */,
+				3EF9FB29235F080D009DCC8D /* Debug */,
+				3EF9FB2A235F080D009DCC8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1583,7 +1599,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_119 /* Build configuration list for PBXNativeTarget "Moya" */ = {
+		OBJ_119 /* Build configuration list for PBXNativeTarget "FutureMoyaNC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_120 /* Debug */,
@@ -1592,25 +1608,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_152 /* Build configuration list for PBXNativeTarget "MoyaNetworkClient" */ = {
+		OBJ_138 /* Build configuration list for PBXNativeTarget "Moya" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_153 /* Debug */,
-				OBJ_154 /* Release */,
+				OBJ_139 /* Debug */,
+				OBJ_140 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_170 /* Build configuration list for PBXNativeTarget "MoyaNetworkClient+Future" */ = {
+		OBJ_169 /* Build configuration list for PBXNativeTarget "MoyaNC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_171 /* Debug */,
-				OBJ_172 /* Release */,
+				OBJ_170 /* Debug */,
+				OBJ_171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_187 /* Build configuration list for PBXNativeTarget "MoyaNetworkClientPackageDescription" */ = {
+		OBJ_187 /* Build configuration list for PBXNativeTarget "MoyaNCPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_188 /* Debug */,
@@ -1637,7 +1653,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_2 /* Build configuration list for PBXProject "MoyaNetworkClient" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "MoyaNC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_3 /* Debug */,

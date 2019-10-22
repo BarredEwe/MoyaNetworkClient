@@ -3,24 +3,24 @@
 import PackageDescription
 
 let package = Package(
-    name: "MoyaNetworkClient",
+    name: "MoyaNC",
     platforms: [.iOS(.v8)],
     products: [
-        .library(name: "MoyaNetworkClient", targets: ["MoyaNetworkClient"]),
+        .library(name: "MoyaNC", targets: ["MoyaNC"]),
         // TODO: Add Cache compatibility
-//        .library(name: "MoyaNetworkClient+Cache", targets: ["MoyaNetworkClient+Cache"]),
-        .library(name: "MoyaNetworkClient+Future", targets: ["MoyaNetworkClient+Future"])
+//        .library(name: "CacheMoyaNC", targets: ["CacheMoyaNC"]),
+        .library(name: "FutureMoyaNC", targets: ["FutureMoyaNC"])
     ],
     dependencies: [
         .package(url: "https://github.com/Moya/Moya.git", .upToNextMajor(from: "13.0.0")),
 //        .package(url: "https://github.com/hyperoslo/Cache.git", .upToNextMajor(from: "5.2.0"))
     ],
     targets: [
-        .target(name: "MoyaNetworkClient", dependencies: ["Moya"],
+        .target(name: "MoyaNC", dependencies: ["Moya"],
                 exclude: ["Example", "fastlane"]),
-//        .target(name: "MoyaNetworkClient+Cache", dependencies: ["MoyaNetworkClient", "Cache"],
+//        .target(name: "CacheMoyaNC", dependencies: ["MoyaNC", "Cache"],
 //                exclude: ["Example", "fastlane"]),
-        .target(name: "MoyaNetworkClient+Future", dependencies: ["MoyaNetworkClient"],
-                exclude: ["Example", "fastlane"]),
+        .target(name: "FutureMoyaNC", dependencies: ["MoyaNC"],
+                exclude: ["Example", "fastlane"])
     ]
 )

@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import MoyaNetworkClient
-import MoyaNetworkClient_Future
+import MoyaNC
+import FutureMoyaNC
 
 class ViewController: UIViewController {
 

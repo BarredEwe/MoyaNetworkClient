@@ -8,7 +8,7 @@
 
 import Foundation
 import Moya
-import MoyaNetworkClient
+import MoyaNC
 
 enum NewsAPI {
     case dogFacts
