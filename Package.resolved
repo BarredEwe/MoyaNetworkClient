@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "Cache",
+        "repositoryURL": "https://github.com/hyperoslo/Cache.git",
+        "state": {
+          "branch": null,
+          "revision": "8c42c575cf28b2ff0e780c9728721e9a8891c92e",
+          "version": "5.2.0"
+        }
+      },
+      {
         "package": "CwlCatchException",
         "repositoryURL": "https://github.com/mattgallagher/CwlCatchException.git",
         "state": {

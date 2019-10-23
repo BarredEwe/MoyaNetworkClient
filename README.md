@@ -69,7 +69,7 @@ extension TestAPI: MoyaTargetType {
 ```
 Definition of caching at the request level:
 ```swift
-client = DefaultMoyaNetworkClient()
+client = DefaultMoyaNC()
 
 client.request(.zen, cache: .returnCacheDataElseLoad)
 ```
@@ -79,7 +79,7 @@ client.request(.zen, cache: .returnCacheDataElseLoad)
 Here is an example of the kinds of complex logic possible with Futures:
 
 ```swift
-client = DefaultMoyaNetworkClient()
+client = DefaultMoyaNC()
 
 // type 'Test' must be Codable
 client.request(.zen)
