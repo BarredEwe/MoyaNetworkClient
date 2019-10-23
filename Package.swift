@@ -7,7 +7,6 @@ let package = Package(
     platforms: [.iOS(.v8)],
     products: [
         .library(name: "MoyaNC", targets: ["MoyaNC"]),
-        // TODO: Add Cache compatibility
         .library(name: "CacheMoyaNC", targets: ["CacheMoyaNC"]),
         .library(name: "FutureMoyaNC", targets: ["FutureMoyaNC"])
     ],
