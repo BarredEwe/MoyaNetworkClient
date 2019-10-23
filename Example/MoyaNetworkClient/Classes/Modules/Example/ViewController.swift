@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    private let networkCLient = DefaultMoyaNetworkClient()
+    private let networkCLient = DefaultMoyaNC()
     private let dateFormatter = DateFormatter()
     private var facts = [Fact]()
 

@@ -7,25 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		3E4303FD2360803C005E2838 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4303F02360803C005E2838 /* Fact.swift */; };
+		3E4303FE2360803C005E2838 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4303F12360803C005E2838 /* Main.storyboard */; };
+		3E4303FF2360803C005E2838 /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4303F42360803C005E2838 /* NewsAPI.swift */; };
+		3E4304002360803C005E2838 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4303F72360803C005E2838 /* ViewController.swift */; };
+		3E4304012360803C005E2838 /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4303F92360803C005E2838 /* FactTableViewCell.swift */; };
+		3E4304022360803C005E2838 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4303FA2360803C005E2838 /* LaunchScreen.xib */; };
+		3E4304032360803C005E2838 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4303FB2360803C005E2838 /* AppDelegate.swift */; };
 		B3523466B68DEDC320F4CDC3 /* Pods_MoyaNetworkClient_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B20866FDB493085EAC0895E /* Pods_MoyaNetworkClient_Example.framework */; };
-		DC52CA8022537C890056ACBB /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52CA7F22537C890056ACBB /* NewsAPI.swift */; };
-		DC52CA85225386E80056ACBB /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52CA84225386E80056ACBB /* Fact.swift */; };
-		DC52CA8A225387DB0056ACBB /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52CA89225387DB0056ACBB /* FactTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E4303F02360803C005E2838 /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		3E4303F22360803C005E2838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E4303F42360803C005E2838 /* NewsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
+		3E4303F72360803C005E2838 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E4303F92360803C005E2838 /* FactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
+		3E4303FA2360803C005E2838 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		3E4303FB2360803C005E2838 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E4303FC2360803C005E2838 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* MoyaNetworkClient_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoyaNetworkClient_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		611F83D90AB55D7F0D89D47E /* Pods-MoyaNetworkClient_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaNetworkClient_Example.release.xcconfig"; path = "Target Support Files/Pods-MoyaNetworkClient_Example/Pods-MoyaNetworkClient_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6B20866FDB493085EAC0895E /* Pods_MoyaNetworkClient_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyaNetworkClient_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D913CEBBE7FCCDFB28E75DC /* Pods-MoyaNetworkClient_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaNetworkClient_Tests.release.xcconfig"; path = "Target Support Files/Pods-MoyaNetworkClient_Tests/Pods-MoyaNetworkClient_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -33,10 +34,7 @@
 		84B5452F20B453198D4E5EFF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		85F06B43830B503C46570803 /* Pods-MoyaNetworkClient_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaNetworkClient_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MoyaNetworkClient_Tests/Pods-MoyaNetworkClient_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C302527274FB2AFEF0C6CFDB /* Pods-MoyaNetworkClient_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaNetworkClient_Example.debug.xcconfig"; path = "Target Support Files/Pods-MoyaNetworkClient_Example/Pods-MoyaNetworkClient_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		CCF4DCA8AD00E5056ABD0454 /* MoyaNetworkClient.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MoyaNetworkClient.podspec; path = ../MoyaNetworkClient.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		DC52CA7F22537C890056ACBB /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
-		DC52CA84225386E80056ACBB /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
-		DC52CA89225387DB0056ACBB /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
+		CCF4DCA8AD00E5056ABD0454 /* MoyaNetworkClient.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MoyaNetworkClient.podspec; path = ../MoyaNetworkClient.podspec; sourceTree = "<group>"; };
 		EF63850F077ED077B459B669 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,11 +59,74 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3E4303ED2360803C005E2838 /* MoyaNetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				3E4303EE2360803C005E2838 /* Classes */,
+				3E4303FA2360803C005E2838 /* LaunchScreen.xib */,
+				3E4303FB2360803C005E2838 /* AppDelegate.swift */,
+				3E4303FC2360803C005E2838 /* Info.plist */,
+			);
+			path = MoyaNetworkClient;
+			sourceTree = "<group>";
+		};
+		3E4303EE2360803C005E2838 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3E4303EF2360803C005E2838 /* Models */,
+				3E4303F12360803C005E2838 /* Main.storyboard */,
+				3E4303F32360803C005E2838 /* API */,
+				3E4303F52360803C005E2838 /* Modules */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3E4303EF2360803C005E2838 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3E4303F02360803C005E2838 /* Fact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3E4303F32360803C005E2838 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3E4303F42360803C005E2838 /* NewsAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3E4303F52360803C005E2838 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3E4303F62360803C005E2838 /* Example */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3E4303F62360803C005E2838 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				3E4303F72360803C005E2838 /* ViewController.swift */,
+				3E4303F82360803C005E2838 /* Cell */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		3E4303F82360803C005E2838 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3E4303F92360803C005E2838 /* FactTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				3E4303ED2360803C005E2838 /* MoyaNetworkClient */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for MoyaNetworkClient */,
 				607FACD11AFB9204008FA782 /* Products */,
 				9966FA4A18C766FB4EDCFCDF /* Pods */,
 				332AB41782338DA36F93F9A0 /* Frameworks */,
@@ -78,28 +139,6 @@
 				607FACD01AFB9204008FA782 /* MoyaNetworkClient_Example.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		607FACD21AFB9204008FA782 /* Example for MoyaNetworkClient */ = {
-			isa = PBXGroup;
-			children = (
-				DC52CA88225387840056ACBB /* Module */,
-				DC52CA87225387760056ACBB /* Resources */,
-				DC52CA86225387620056ACBB /* Application */,
-				DC52CA81225386C90056ACBB /* Models */,
-				DC52CA7E22537B9D0056ACBB /* API */,
-				607FACD31AFB9204008FA782 /* Supporting Files */,
-			);
-			name = "Example for MoyaNetworkClient";
-			path = MoyaNetworkClient;
-			sourceTree = "<group>";
-		};
-		607FACD31AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACD41AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
@@ -121,57 +160,6 @@
 				6D913CEBBE7FCCDFB28E75DC /* Pods-MoyaNetworkClient_Tests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		DC52CA7E22537B9D0056ACBB /* API */ = {
-			isa = PBXGroup;
-			children = (
-				DC52CA7F22537C890056ACBB /* NewsAPI.swift */,
-			);
-			name = API;
-			sourceTree = "<group>";
-		};
-		DC52CA81225386C90056ACBB /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				DC52CA84225386E80056ACBB /* Fact.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		DC52CA86225387620056ACBB /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
-			);
-			name = Application;
-			sourceTree = "<group>";
-		};
-		DC52CA87225387760056ACBB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		DC52CA88225387840056ACBB /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				DC52CA8B225387E10056ACBB /* Cell */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-			);
-			name = Module;
-			sourceTree = "<group>";
-		};
-		DC52CA8B225387E10056ACBB /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				DC52CA89225387DB0056ACBB /* FactTableViewCell.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +197,7 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = W32FTX2H6D;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -218,7 +206,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -237,9 +224,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				3E4304022360803C005E2838 /* LaunchScreen.xib in Resources */,
+				3E4303FE2360803C005E2838 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,31 +287,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				DC52CA85225386E80056ACBB /* Fact.swift in Sources */,
-				DC52CA8A225387DB0056ACBB /* FactTableViewCell.swift in Sources */,
-				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				DC52CA8022537C890056ACBB /* NewsAPI.swift in Sources */,
+				3E4304002360803C005E2838 /* ViewController.swift in Sources */,
+				3E4303FD2360803C005E2838 /* Fact.swift in Sources */,
+				3E4303FF2360803C005E2838 /* NewsAPI.swift in Sources */,
+				3E4304032360803C005E2838 /* AppDelegate.swift in Sources */,
+				3E4304012360803C005E2838 /* FactTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+		3E4303F12360803C005E2838 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
+				3E4303F22360803C005E2838 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDF1AFB9204008FA782 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -441,12 +419,14 @@
 			baseConfigurationReference = C302527274FB2AFEF0C6CFDB /* Pods-MoyaNetworkClient_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = W32FTX2H6D;
 				INFOPLIST_FILE = MoyaNetworkClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.MoyaNetworkClient-Example1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -457,6 +437,7 @@
 			baseConfigurationReference = 611F83D90AB55D7F0D89D47E /* Pods-MoyaNetworkClient_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = W32FTX2H6D;
 				INFOPLIST_FILE = MoyaNetworkClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

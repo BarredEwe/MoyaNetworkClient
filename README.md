@@ -7,12 +7,15 @@ Simple Swift Requests
 </H4>
 
 <p align="center">
+<br>
 <a href="https://github.com/BarredEwe/MoyaNetworkClient/releases/latest"><img alt="CocoaPods" src="https://img.shields.io/cocoapods/v/MoyaNetworkClient.svg"/></a>
 <a href="https://developer.apple.com/swift"><img alt="Swift5" src="https://img.shields.io/badge/language-Swift5-orange.svg"/></a> 
 <a href="https://cocoapods.org/pods/MoyaNetworkClient"><img alt="License" src="https://img.shields.io/cocoapods/l/MoyaNetworkClient.svg"/></a>
 <a href="https://developer.apple.com/"><img alt="Platform" src="https://img.shields.io/badge/platform-iOS-green.svg"/></a>
+<br/>
 <a href="https://www.codefactor.io/repository/github/barredewe/moyanetworkclient"><img src="https://www.codefactor.io/repository/github/barredewe/moyanetworkclient/badge" alt="CodeFactor" /></a>
 <a href="https://travis-ci.com/BarredEwe/MoyaNetworkClient"><img src="https://travis-ci.com/BarredEwe/MoyaNetworkClient.svg?branch=master" alt="CodeFactor" /></a>
+<a href="https://github.com/apple/swift-package-manage"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="Swift Package Manager" /></a>
 </p>
 
 ---
@@ -26,7 +29,7 @@ MoyaNC is an abstraction over abstraction (thanks to [Moya](https://github.com/M
 To run the example project, clone the repo, and run `pod install` from the Example directory first. After some setup, using MoyaNC is really simple. You can access an API like this:
 
 ```swift
-client = DefaultMoyaNetworkClient()
+client = DefaultMoyaNC()
 
 // type 'Test' must be Codable
 client.request(.zen) { (result: Result<Test>) in
@@ -66,7 +69,7 @@ extension TestAPI: MoyaTargetType {
 ```
 Definition of caching at the request level:
 ```swift
-client = DefaultMoyaNetworkClient()
+client = DefaultMoyaNC()
 
 client.request(.zen, cache: .returnCacheDataElseLoad)
 ```
@@ -76,7 +79,7 @@ client.request(.zen, cache: .returnCacheDataElseLoad)
 Here is an example of the kinds of complex logic possible with Futures:
 
 ```swift
-client = DefaultMoyaNetworkClient()
+client = DefaultMoyaNC()
 
 // type 'Test' must be Codable
 client.request(.zen)
@@ -98,6 +101,16 @@ Then run `pod install`.
 
 In any file you'd like to use Moya in, don't forget to
 import the framework with `import MoyaNetworkClient`.
+
+### Swift Package Manager
+
+To integrate using Apple's Swift package manager, add the following as a dependency to your `Package.swift`:
+
+```swift
+.package(url: "https://github.com/BarredEwe/MoyaNetworkClient.git", .upToNextMajor(from: "0.5.0"))
+```
+
+and then specify `"MoyaNetworkClient"` as a dependency of the Target in which you wish to use MoyaNetworkClient.
 
 ## Author
 

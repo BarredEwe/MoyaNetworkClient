@@ -1,6 +1,9 @@
 import Moya
+#if !COCOAPODS
+    import MoyaNC
+#endif
 
-extension MoyaNetworkClient {
+extension MoyaNC {
 
     @discardableResult
     public func request<Value: Codable>(_ target: BaseTargetType) -> FutureResult<Value> {
@@ -8,7 +11,7 @@ extension MoyaNetworkClient {
         return request(target, cachePolicy: target.cachePolicy)
         #else
         return FutureResult<Value> { completion in
-            self.providerRequest(target) { (result: Result<Value>) in
+            self.request(target) { (result: Result<Value>) in
                 switch result {
                 case let .success(value): completion(.success(value))
                 case let .failure(error): completion(.failure(error))

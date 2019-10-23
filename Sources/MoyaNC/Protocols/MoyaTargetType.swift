@@ -1,4 +1,5 @@
 import Moya
+import Foundation
 
 public protocol BaseTargetType: TargetType {
     /// Used to parse Codable on this key.

@@ -1,6 +1,16 @@
 import Moya
+#if !COCOAPODS
+    import MoyaNC
+#endif
 
-extension MoyaNetworkClient {
+extension MoyaNC {
+
+    internal class SimpleCancellable: Cancellable {
+        var isCancelled = false
+        func cancel() {
+            isCancelled = true
+        }
+    }
 
     @discardableResult
     public func request<Value: Codable>(_ target: BaseTargetType, cache: MoyaCachePolicy,
