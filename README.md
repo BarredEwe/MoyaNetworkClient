@@ -29,7 +29,7 @@ MoyaNC is an abstraction over abstraction (thanks to [Moya](https://github.com/M
 To run the example project, clone the repo, and run `pod install` from the Example directory first. After some setup, using MoyaNC is really simple. You can access an API like this:
 
 ```swift
-client = DefaultMoyaNetworkClient()
+client = DefaultMoyaNC()
 
 // type 'Test' must be Codable
 client.request(.zen) { (result: Result<Test>) in
