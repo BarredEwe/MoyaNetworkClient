@@ -22,7 +22,7 @@ Simple Swift Requests
 
 ## Introduction
 
-MoyaNC is an abstraction over abstraction (thanks to [Moya](https://github.com/Moya/Moya) 🖤🖤🖤) allowing you not to worry about the data mapping layer and just use your requests. The Codable protocol is used for JSON data mapping, all that is needed is to comply with this protocol and specify the type! In addition, there is the ability to easily and simply cache any requests.
+MoyaNC is an abstraction over abstraction (thanks to [Moya](https://github.com/Moya/Moya) 🖤🖤🖤) allowing you not to worry about the data mapping layer and just use your requests. The Codable protocol is used for JSON data mapping, all that is needed is to comply with this protocol and specify the type! Additionally, there is the ability to easily and simply cache any requests.
 
 ## Example
 
