@@ -51,7 +51,7 @@ Need to add `pod 'MoyaNetworkClient/Cache'` to the Podfile.
 - **FutureResult**: A Future is used to retrieve the result of a concurrent, asynchronous operation. It is a key building block in asynchronous, non-blocking code. 
 Need to add `pod 'MoyaNetworkClient/Future'` to the Podfile.
 
-### Cache
+### Cache (Alpha)
 
 A simple example to use caching requests:
 
