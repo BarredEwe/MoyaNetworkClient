@@ -46,12 +46,12 @@ That's a basic example. Many API requests need parameters.
 ## Extensions
 
 Moya provides extensions for:
-- [**Cache**](https://github.com/hyperoslo/Cache): Allows you to cache request data using a flexible caching policy. 
+- **Cache**: Allows you to cache request data using a flexible caching policy. 
 Need to add `pod 'MoyaNetworkClient/Cache'` to the Podfile.
 - **FutureResult**: A Future is used to retrieve the result of a concurrent, asynchronous operation. It is a key building block in asynchronous, non-blocking code. 
 Need to add `pod 'MoyaNetworkClient/Future'` to the Podfile.
 
-### Cache (Alpha)
+### Cache
 
 A simple example to use caching requests:
 
@@ -61,7 +61,7 @@ enum TestAPI {
     case .zen
 }
 
-extension TestAPI: MoyaTargetType {
+extension TestAPI: MoyaTargetType, CacheTarget {
     var cachePolicy: MoyaCachePolicy {
         return .returnCacheDataElseLoad
     }
