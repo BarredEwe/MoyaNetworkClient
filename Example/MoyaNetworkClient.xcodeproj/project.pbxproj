@@ -10,10 +10,10 @@
 		3E4303FD2360803C005E2838 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4303F02360803C005E2838 /* Fact.swift */; };
 		3E4303FE2360803C005E2838 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4303F12360803C005E2838 /* Main.storyboard */; };
 		3E4303FF2360803C005E2838 /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4303F42360803C005E2838 /* NewsAPI.swift */; };
-		3E4304002360803C005E2838 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4303F72360803C005E2838 /* ViewController.swift */; };
-		3E4304012360803C005E2838 /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4303F92360803C005E2838 /* FactTableViewCell.swift */; };
 		3E4304022360803C005E2838 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4303FA2360803C005E2838 /* LaunchScreen.xib */; };
 		3E4304032360803C005E2838 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4303FB2360803C005E2838 /* AppDelegate.swift */; };
+		3E76E07923CB1E000010435B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76E07623CB1E000010435B /* ViewController.swift */; };
+		3E76E07A23CB1E000010435B /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76E07823CB1E000010435B /* FactTableViewCell.swift */; };
 		B3523466B68DEDC320F4CDC3 /* Pods_MoyaNetworkClient_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B20866FDB493085EAC0895E /* Pods_MoyaNetworkClient_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +21,11 @@
 		3E4303F02360803C005E2838 /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		3E4303F22360803C005E2838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E4303F42360803C005E2838 /* NewsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
-		3E4303F72360803C005E2838 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3E4303F92360803C005E2838 /* FactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
 		3E4303FA2360803C005E2838 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		3E4303FB2360803C005E2838 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E4303FC2360803C005E2838 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E76E07623CB1E000010435B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E76E07823CB1E000010435B /* FactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* MoyaNetworkClient_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoyaNetworkClient_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		611F83D90AB55D7F0D89D47E /* Pods-MoyaNetworkClient_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaNetworkClient_Example.release.xcconfig"; path = "Target Support Files/Pods-MoyaNetworkClient_Example/Pods-MoyaNetworkClient_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6B20866FDB493085EAC0895E /* Pods_MoyaNetworkClient_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyaNetworkClient_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				3E4303EE2360803C005E2838 /* Classes */,
+				3E4303F12360803C005E2838 /* Main.storyboard */,
 				3E4303FA2360803C005E2838 /* LaunchScreen.xib */,
+				3E4303F12360803C005E2838 /* Main.storyboard */,
 				3E4303FB2360803C005E2838 /* AppDelegate.swift */,
 				3E4303FC2360803C005E2838 /* Info.plist */,
 			);
@@ -73,10 +75,9 @@
 		3E4303EE2360803C005E2838 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3E76E07523CB1E000010435B /* Example */,
 				3E4303EF2360803C005E2838 /* Models */,
-				3E4303F12360803C005E2838 /* Main.storyboard */,
 				3E4303F32360803C005E2838 /* API */,
-				3E4303F52360803C005E2838 /* Modules */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -97,27 +98,19 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		3E4303F52360803C005E2838 /* Modules */ = {
+		3E76E07523CB1E000010435B /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				3E4303F62360803C005E2838 /* Example */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		3E4303F62360803C005E2838 /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				3E4303F72360803C005E2838 /* ViewController.swift */,
-				3E4303F82360803C005E2838 /* Cell */,
+				3E76E07723CB1E000010435B /* Cell */,
+				3E76E07623CB1E000010435B /* ViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
 		};
-		3E4303F82360803C005E2838 /* Cell */ = {
+		3E76E07723CB1E000010435B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				3E4303F92360803C005E2838 /* FactTableViewCell.swift */,
+				3E76E07823CB1E000010435B /* FactTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -240,7 +233,6 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MoyaNetworkClient_Example/Pods-MoyaNetworkClient_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/MoyaNetworkClient/MoyaNetworkClient.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -248,7 +240,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MoyaNetworkClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -287,11 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E4304002360803C005E2838 /* ViewController.swift in Sources */,
 				3E4303FD2360803C005E2838 /* Fact.swift in Sources */,
 				3E4303FF2360803C005E2838 /* NewsAPI.swift in Sources */,
+				3E76E07A23CB1E000010435B /* FactTableViewCell.swift in Sources */,
+				3E76E07923CB1E000010435B /* ViewController.swift in Sources */,
 				3E4304032360803C005E2838 /* AppDelegate.swift in Sources */,
-				3E4304012360803C005E2838 /* FactTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

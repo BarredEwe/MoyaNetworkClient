@@ -7,11 +7,6 @@ public protocol BaseTargetType: TargetType {
 
     /// When downloading files, you need to specify this url
     var destinationURL: URL? { get }
-
-    #if canImport(Cache)
-    /// The constants used to specify interaction with the cached responses.
-    var cachePolicy: MoyaCachePolicy { get }
-    #endif
 }
 
 public extension BaseTargetType {
@@ -26,12 +21,6 @@ public extension BaseTargetType {
     var headers: [String : String]? {
         return nil
     }
-
-    #if canImport(Cache)
-    var cachePolicy: MoyaCachePolicy {
-        return .reloadIgnoringCacheData
-    }
-    #endif
 }
 
 public protocol MoyaTargetType: BaseTargetType {

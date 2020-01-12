@@ -1,6 +1,0 @@
-framework module MoyaNetworkClient {
-  umbrella header "MoyaNetworkClient-umbrella.h"
-
-  export *
-  module * { export * }
-}

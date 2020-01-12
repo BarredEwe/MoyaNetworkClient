@@ -6,18 +6,18 @@ public protocol Request {
     func cancel()
 }
 
-class RequestAdapter: Request {
+public class RequestAdapter: Request {
 
     private let cancellable: Cancellable
 
-    var isCancelled: Bool
+    public var isCancelled: Bool
 
-    init(cancellable: Cancellable) {
+    public init(cancellable: Cancellable) {
         self.cancellable = cancellable
         isCancelled = cancellable.isCancelled
     }
 
-    func cancel() {
+    public func cancel() {
         if !isCancelled {
             isCancelled = true
             cancellable.cancel()

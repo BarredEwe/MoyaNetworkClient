@@ -46,12 +46,12 @@ That's a basic example. Many API requests need parameters.
 ## Extensions
 
 Moya provides extensions for:
-- [**Cache**](https://github.com/hyperoslo/Cache): Allows you to cache request data using a flexible caching policy. 
+- **Cache**: Allows you to cache request data using a flexible caching policy. 
 Need to add `pod 'MoyaNetworkClient/Cache'` to the Podfile.
 - **FutureResult**: A Future is used to retrieve the result of a concurrent, asynchronous operation. It is a key building block in asynchronous, non-blocking code. 
 Need to add `pod 'MoyaNetworkClient/Future'` to the Podfile.
 
-### Cache (Alpha)
+### Cache
 
 A simple example to use caching requests:
 
@@ -61,7 +61,7 @@ enum TestAPI {
     case .zen
 }
 
-extension TestAPI: MoyaTargetType {
+extension TestAPI: MoyaTargetType, CacheTarget {
     var cachePolicy: MoyaCachePolicy {
         return .returnCacheDataElseLoad
     }
@@ -107,7 +107,7 @@ import the framework with `import MoyaNetworkClient`.
 To integrate using Apple's Swift package manager, add the following as a dependency to your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/BarredEwe/MoyaNetworkClient.git", .upToNextMajor(from: "0.5.0"))
+.package(url: "https://github.com/BarredEwe/MoyaNetworkClient.git", .upToNextMajor(from: "1.0.0"))
 ```
 
 and then specify `"MoyaNetworkClient"` as a dependency of the Target in which you wish to use MoyaNetworkClient.

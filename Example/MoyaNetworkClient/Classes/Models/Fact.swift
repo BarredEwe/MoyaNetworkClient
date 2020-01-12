@@ -10,16 +10,14 @@ import Foundation
 
 struct Fact: Codable {
     let id: String
-    let v: Int
-    let text: String
-    let updatedAt: String
-    let deleted: Bool
-    let source: String
-    let used: Bool
+    let text: String?
+    let updatedAt: String?
+    let deleted: Bool?
+    let source: String?
+    let used: Bool?
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case v = "__v"
         case text, updatedAt, deleted, source, used
     }
 }
