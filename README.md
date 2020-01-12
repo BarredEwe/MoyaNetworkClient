@@ -107,7 +107,7 @@ import the framework with `import MoyaNetworkClient`.
 To integrate using Apple's Swift package manager, add the following as a dependency to your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/BarredEwe/MoyaNetworkClient.git", .upToNextMajor(from: "0.5.0"))
+.package(url: "https://github.com/BarredEwe/MoyaNetworkClient.git", .upToNextMajor(from: "1.0.0"))
 ```
 
 and then specify `"MoyaNetworkClient"` as a dependency of the Target in which you wish to use MoyaNetworkClient.
