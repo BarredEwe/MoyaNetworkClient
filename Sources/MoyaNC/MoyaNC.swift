@@ -12,6 +12,7 @@ public typealias DefaultMoyaNetworkClient = MoyaNC<MoyaNCError>
 @available(*, deprecated, renamed: "MoyaNC")
 public class MoyaNetworkClient<ErrorType: Error & Decodable>: MoyaNC<ErrorType> { }
 
+/// Request provider class. Requests should be made through this class only.
 public class MoyaNC<ErrorType: Error & Decodable> {
 
     internal var jsonDecoder: JSONDecoder
@@ -26,11 +27,7 @@ public class MoyaNC<ErrorType: Error & Decodable> {
 
     @discardableResult
     public func request<Value: Codable>(_ target: BaseTargetType, _ completion: @escaping Completion<Value>) -> Request {
-        #if canImport(Cache)
-        return providerRequest(target, cachePolicy: target.cachePolicy, completion)
-        #else
         return providerRequest(target, completion)
-        #endif
     }
 
     // MARK: Private Methods
@@ -47,14 +44,10 @@ public class MoyaNC<ErrorType: Error & Decodable> {
                 print("There was something wrong with the request! Error: \(error)")
                 completion(.failure(error))
             }
-            objc_sync_enter(self)
-            self.requests.removeValue(forKey: requestId)
-            objc_sync_exit(self)
+            synced(self) { self.requests.removeValue(forKey: requestId) }
         }
-        objc_sync_enter(self)
         let request = RequestAdapter(cancellable: cancelable)
-        requests[requestId] = request
-        objc_sync_exit(self)
+        synced(self) { requests[requestId] = request }
         return request
     }
 
@@ -67,19 +60,9 @@ public class MoyaNC<ErrorType: Error & Decodable> {
             case is Data.Type: result = response.data as! Value
             default: result = try response.map(Value.self, atKeyPath: target.keyPath, using: self.jsonDecoder, failsOnEmptyData: false)
             }
-            #if canImport(Cache)
-            objc_sync_enter(self)
-            ResponseCache.cacheData(target, data: response)
-            objc_sync_exit(self)
-            #endif
             completion(.success(result))
         } catch let error {
             if let result = try? response.mapJSON(), let object = result as? Value {
-                #if canImport(Cache)
-                objc_sync_enter(self)
-                ResponseCache.cacheData(target, data: response)
-                objc_sync_exit(self)
-                #endif
                 completion(.success(object))
                 return
             }

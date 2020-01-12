@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAnimalFactsUseFutureRequestChain()
+        getCatFacts()
     }
 
     // MARK: Private Methods
