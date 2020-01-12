@@ -37,7 +37,6 @@ extension MoyaNC {
         case .returnCacheDataElseLoad:
             guard let cacheValue: Value = getCache(for: target) else { return cacheProviderRequest(target, completion) }
             completion(.success(cacheValue))
-            break
         case .returnCacheDataDontLoad:
             if let cacheValue: Value = getCache(for: target) {
                 completion(.success(cacheValue))
@@ -46,7 +45,6 @@ extension MoyaNC {
                 print("An error occurred while retrieving data from the cache! Error: \(error.localizedDescription)")
                 completion(.failure(error))
             }
-            break
         case .reloadIgnoringCacheData: return cacheProviderRequest(target, completion)
         default: break
         }

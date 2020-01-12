@@ -1,4 +1,3 @@
-
 /// Protocol describing cache interaction.
 public protocol CacheTarget {
     /// The constants used to specify interaction with the cached responses. (default: .notUseCache)
