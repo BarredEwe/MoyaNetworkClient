@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
 
     private func getAnimalFactsUseFutureRequestChain() {
-        networkCLient.request(NewsAPI.catFacts, cachePolicy: .reloadIgnoringCacheData)
+        networkCLient.request(NewsAPI.catFacts, cache: .reloadIgnoringCacheData)
             .flatMapSuccess { [weak self] (facts: [Fact]) -> FutureResult<[Fact]>? in
                 self?.facts.append(contentsOf: facts)
                 return self?.networkCLient.request(NewsAPI.dogFacts)

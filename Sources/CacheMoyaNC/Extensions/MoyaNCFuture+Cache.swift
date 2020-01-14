@@ -8,13 +8,13 @@ import FutureMoyaNC
 extension MoyaNC {
     @discardableResult
     public func request<Value: Codable>(_ target: MoyaCacheTarget) -> FutureResult<Value> {
-        return request(target, cachePolicy: target.cachePolicy)
+        return request(target, cache: target.cachePolicy)
     }
 
     @discardableResult
-    public func request<Value: Codable>(_ target: MoyaCacheTarget, cachePolicy: MoyaCachePolicy) -> FutureResult<Value> {
+    public func request<Value: Codable>(_ target: MoyaCacheTarget, cache: MoyaCachePolicy) -> FutureResult<Value> {
         return FutureResult<Value> { completion in
-            self.processCache(target, cachePolicy: cachePolicy) { result in completion(result) }
+            self.processCache(target, cachePolicy: cache) { result in completion(result) }
         }
     }
 }

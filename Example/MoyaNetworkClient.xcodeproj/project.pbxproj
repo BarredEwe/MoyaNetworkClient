@@ -34,7 +34,7 @@
 		84B5452F20B453198D4E5EFF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		85F06B43830B503C46570803 /* Pods-MoyaNetworkClient_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaNetworkClient_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MoyaNetworkClient_Tests/Pods-MoyaNetworkClient_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C302527274FB2AFEF0C6CFDB /* Pods-MoyaNetworkClient_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaNetworkClient_Example.debug.xcconfig"; path = "Target Support Files/Pods-MoyaNetworkClient_Example/Pods-MoyaNetworkClient_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		CCF4DCA8AD00E5056ABD0454 /* MoyaNetworkClient.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MoyaNetworkClient.podspec; path = ../MoyaNetworkClient.podspec; sourceTree = "<group>"; };
+		CCF4DCA8AD00E5056ABD0454 /* MoyaNetworkClient.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MoyaNetworkClient.podspec; path = ../MoyaNetworkClient.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EF63850F077ED077B459B669 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				3E4303EE2360803C005E2838 /* Classes */,
-				3E4303F12360803C005E2838 /* Main.storyboard */,
 				3E4303FA2360803C005E2838 /* LaunchScreen.xib */,
 				3E4303F12360803C005E2838 /* Main.storyboard */,
 				3E4303FB2360803C005E2838 /* AppDelegate.swift */,
