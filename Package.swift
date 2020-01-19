@@ -16,7 +16,7 @@ let package = Package(
     targets: [
         .target(name: "MoyaNC", dependencies: ["Moya"],
                 exclude: ["Example", "fastlane"]),
-        .target(name: "CacheMoyaNC", dependencies: ["MoyaNC"],
+        .target(name: "CacheMoyaNC", dependencies: ["MoyaNC", "FutureMoyaNC"],
                 exclude: ["Example", "fastlane"]),
         .target(name: "FutureMoyaNC", dependencies: ["MoyaNC"],
                 exclude: ["Example", "fastlane"])

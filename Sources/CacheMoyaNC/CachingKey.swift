@@ -8,7 +8,7 @@ public typealias CachingKey = String
 
 public extension CachingKey {
     init(target: BaseTargetType) {
-        let baseInfo = target.method.rawValue + String(target.headers.hashValue) + (target.keyPath ?? "")
+        let baseInfo = target.method.rawValue + (target.headers?.sorted(by: { $0.key > $1.key }).description ?? "") + (target.keyPath ?? "")
         switch target.task {
         case let .requestParameters(parameters, _):
             self = baseInfo + target.path + parameters.sorted(by: { $0.key > $1.key }).description
