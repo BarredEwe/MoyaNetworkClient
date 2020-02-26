@@ -1,20 +1,18 @@
 PODS:
-  - Alamofire (4.9.1)
-  - Moya (13.0.1):
-    - Moya/Core (= 13.0.1)
-  - Moya/Core (13.0.1):
-    - Alamofire (~> 4.1)
-    - Result (~> 4.1)
-  - MoyaNetworkClient (1.0.1):
-    - MoyaNetworkClient/Core (= 1.0.1)
-  - MoyaNetworkClient/Cache (1.0.1):
+  - Alamofire (5.0.2)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - MoyaNetworkClient (2.0.0):
+    - MoyaNetworkClient/Core (= 2.0.0)
+  - MoyaNetworkClient/Cache (2.0.0):
     - MoyaNetworkClient/Core
     - MoyaNetworkClient/Future
-  - MoyaNetworkClient/Core (1.0.1):
-    - Moya
-  - MoyaNetworkClient/Future (1.0.1):
+  - MoyaNetworkClient/Core (2.0.0):
+    - Moya (~> 14.0)
+  - MoyaNetworkClient/Future (2.0.0):
     - MoyaNetworkClient/Core
-  - Result (4.1.0)
 
 DEPENDENCIES:
   - MoyaNetworkClient (from `../`)
@@ -25,18 +23,16 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Moya
-    - Result
 
 EXTERNAL SOURCES:
   MoyaNetworkClient:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
-  MoyaNetworkClient: 38bdf4c8294990a8ad85936bd09e60bd2d4bfc36
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  MoyaNetworkClient: 7fca37f10e974b3fe98f7467faccbcd19c88b5dc
 
-PODFILE CHECKSUM: 517644dffafd3c0c09f9065039c9c69478ec1910
+PODFILE CHECKSUM: a9d804f94f97c439b47ce5138ecd1f03b384650f
 
 COCOAPODS: 1.8.4

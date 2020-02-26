@@ -20,7 +20,7 @@ public class MoyaNC<ErrorType: Error & Decodable> {
     internal var requests = [String: Request]()
 
     public init(jsonDecoder: JSONDecoder = JSONDecoder(),
-                provider: MoyaProvider<MultiTarget> = MoyaProvider<MultiTarget>(plugins: [NetworkLoggerPlugin(verbose: true)])) {
+                provider: MoyaProvider<MultiTarget> = MoyaProvider<MultiTarget>(plugins: [NetworkLoggerPlugin(configuration: .init(logOptions: .verbose))])) {
         self.jsonDecoder = jsonDecoder
         self.provider = provider
     }

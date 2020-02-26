@@ -36,9 +36,11 @@ extension MoyaNC {
         switch cachePolicy {
         case .returnCacheDataElseLoad:
             guard let cacheValue: Value = getCache(for: target) else { return cacheProviderRequest(target, cache: cachePolicy, completion) }
+            print("Getting cache for the request: .\(target.method.rawValue)(\(target.baseURL.absoluteString + target.path))")
             completion(.success(cacheValue))
         case .returnCacheDataDontLoad:
             if let cacheValue: Value = getCache(for: target) {
+                print("Getting cache for the request: .\(target.method.rawValue)(\(target.baseURL.absoluteString + target.path))")
                 completion(.success(cacheValue))
             } else {
                 let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data in cache"])
@@ -52,7 +54,6 @@ extension MoyaNC {
     }
 
     internal func getCache<Value: Codable>(for target: MoyaCacheTarget) -> Value? {
-        print("Getting cache for the request: .\(target.method.rawValue)(\(target.baseURL.absoluteString + target.path))")
         return target.cacheStorage?.fetch(for: target)
     }
 
