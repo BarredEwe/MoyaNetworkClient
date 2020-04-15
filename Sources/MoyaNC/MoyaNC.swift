@@ -73,7 +73,9 @@ public class MoyaNC<ErrorType: Error & Decodable> {
     }
 
     internal func process(error: Error, response: Response?) -> Error {
-        if let response = response, let customError = try? response.map(ErrorType.self) { return customError }
+        guard let response = response else { return error }
+        if let customError = try? response.map(ErrorType.self) { return customError }
+        if let moyaNCError = (try? response.mapString()).flatMap(MoyaNCError.init(error:)) { return moyaNCError }
         return error
     }
 
