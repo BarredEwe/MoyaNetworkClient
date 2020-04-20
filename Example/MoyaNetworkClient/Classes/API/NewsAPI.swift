@@ -60,7 +60,7 @@ extension NewsAPI: MoyaTargetType, CacheTarget {
 
     var cachePolicy: MoyaCachePolicy {
         switch self {
-        case .catFacts: return .returnCacheDataElseLoad
+        case .catFacts: return .reloadIgnoringCacheData
         case .dogFacts: return .returnCacheDataElseLoad
         }
     }

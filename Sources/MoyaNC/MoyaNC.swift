@@ -67,7 +67,6 @@ public class MoyaNC<ErrorType: Error & Decodable> {
                 completion(.success(object))
                 return
             }
-            let error = self.process(error: error, response: response)
             completion(.failure(error))
         }
     }
