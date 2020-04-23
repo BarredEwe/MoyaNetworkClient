@@ -37,7 +37,13 @@ public class MoyaNC<ErrorType: Error & Decodable> {
         let cancelable = provider.request(MultiTarget(target)) { result in
             switch result {
             case let .success(response):
-                self.process(response: response, target, completion)
+                do {
+                    let response = try response.filterSuccessfulStatusCodes()
+                    self.process(response: response, target, completion)
+                } catch let error {
+                    let error = self.process(error: error, response: response)
+                    completion(.failure(error))
+                }
             case let .failure(error):
                 if self.isCancelledError(error, requestId: requestId) { return }
                 let error = self.process(error: error, response: error.response)
@@ -53,7 +59,6 @@ public class MoyaNC<ErrorType: Error & Decodable> {
 
     internal func process<Value: Codable>(response: Response, _ target: BaseTargetType, _ completion: @escaping Completion<Value>) {
         do {
-            let response = try response.filterSuccessfulStatusCodes()
             var result: Value
             switch Value.self {
             case is URL.Type: result = target.destinationURL as! Value
