@@ -6,18 +6,19 @@ import MoyaNC
 public typealias FutureResult<Value> = Future<Result<Value>>
 
 extension Future {
+    @inlinable
     public func mapSuccess<Success, NewSuccess>(_ transform: @escaping (Success) -> NewSuccess) -> FutureResult<NewSuccess>
         where Response == Result<Success> {
             return map { $0.map(transform) }
     }
 
-
+    @inlinable
     public func mapError<Success>(_ transform: @escaping (Error) -> Error) -> FutureResult<Success>
         where Response == Result<Success> {
             return map { $0.mapError(transform) }
     }
 
-
+    @inlinable
     public func flatMapSuccess<Success, NewSuccess>(_ transform: @escaping (Success) -> FutureResult<NewSuccess>?) -> FutureResult<NewSuccess>
         where Response == Result<Success>{
             return flatMap { result in
@@ -37,6 +38,7 @@ extension Future {
             }
     }
 
+    @inlinable
     public func flatMapError<Success>(_ transform: @escaping (Error) -> FutureResult<Success>?) -> FutureResult<Success>
         where Response == Result<Success> {
             return flatMap { result in
@@ -55,6 +57,7 @@ extension Future {
             }
     }
 
+    @inlinable
     public func observeSuccess<Success>(_ callback: @escaping (Success) -> Void) -> Future
         where Response == Result<Success> {
             return mapSuccess {
@@ -63,6 +66,7 @@ extension Future {
             }
     }
 
+    @inlinable
     public func observeError<Success>(_ callback: @escaping (Error) -> Void) -> Future
         where Response == Result<Success> {
             return mapError {
@@ -71,6 +75,7 @@ extension Future {
             }
     }
 
+    @inlinable
     public func parallel<Success, NewResponse>(_ a: FutureResult<NewResponse>, completesOn completionQueue: DispatchQueue = .main)
         -> FutureResult<(Success, NewResponse)>  where Response == Result<Success> {
             return createParallelWith(self, a, completesOn: completionQueue) {
@@ -84,6 +89,7 @@ extension Future {
             }
     }
 
+    @inlinable
     public func parallel<Success, NewResponse, FinalResponse>(_ fA: FutureResult<NewResponse>,
                                                                         completesOn completionQueue: DispatchQueue = .main,
                                                                         combine: @escaping (Success, NewResponse) -> FinalResponse)
