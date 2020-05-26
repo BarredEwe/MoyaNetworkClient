@@ -76,12 +76,14 @@ extension Future {
     }
 
     @inlinable
-    public func parallel<Success, NewResponse>(_ a: FutureResult<NewResponse>, completesOn completionQueue: DispatchQueue = .main)
-        -> FutureResult<(Success, NewResponse)>  where Response == Result<Success> {
-            return createParallelWith(self, a, completesOn: completionQueue) {
-                (result: Result<Success>, newResult: Result<NewResponse>) -> Result<(Success, NewResponse)> in
+    public func parallel<Success, NewResponse, FinalResponse>(_ fA: FutureResult<NewResponse>,
+                                                              completesOn completionQueue: DispatchQueue = .main,
+                                                              combine: @escaping (Success, NewResponse) -> FinalResponse)
+        -> FutureResult<FinalResponse> where Response == Result<Success> {
+            return createParallelWith(self, fA, completesOn: completionQueue) {
+                (result: Result<Success>, newResult: Result<NewResponse>) -> Result<FinalResponse> in
                 switch (result, newResult) {
-                case let (.success(info), .success(newInfo)): return .success((info, newInfo))
+                case let (.success(info), .success(newInfo)): return .success(combine(info, newInfo))
                 case let (.success, .failure(error)): return .failure(error)
                 case let (.failure(error), .success): return .failure(error)
                 case let (.failure(error), .failure): return .failure(error)
@@ -90,14 +92,12 @@ extension Future {
     }
 
     @inlinable
-    public func parallel<Success, NewResponse, FinalResponse>(_ fA: FutureResult<NewResponse>,
-                                                                        completesOn completionQueue: DispatchQueue = .main,
-                                                                        combine: @escaping (Success, NewResponse) -> FinalResponse)
-        -> FutureResult<FinalResponse> where Response == Result<Success> {
-            return createParallelWith(self, fA, completesOn: completionQueue) {
-                (result: Result<Success>, newResult: Result<NewResponse>) -> Result<FinalResponse> in
+    public func parallel<Success, NewResponse>(_ a: FutureResult<NewResponse>, completesOn completionQueue: DispatchQueue = .main)
+        -> FutureResult<(Success, NewResponse)>  where Response == Result<Success> {
+            return createParallelWith(self, a, completesOn: completionQueue) {
+                (result: Result<Success>, newResult: Result<NewResponse>) -> Result<(Success, NewResponse)> in
                 switch (result, newResult) {
-                case let (.success(info), .success(newInfo)): return .success(combine(info, newInfo))
+                case let (.success(info), .success(newInfo)): return .success((info, newInfo))
                 case let (.success, .failure(error)): return .failure(error)
                 case let (.failure(error), .success): return .failure(error)
                 case let (.failure(error), .failure): return .failure(error)

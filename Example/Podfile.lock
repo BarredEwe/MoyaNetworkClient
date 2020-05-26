@@ -4,14 +4,14 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
-  - MoyaNetworkClient (2.0.4):
-    - MoyaNetworkClient/Core (= 2.0.4)
-  - MoyaNetworkClient/Cache (2.0.4):
+  - MoyaNetworkClient (3.1.0):
+    - MoyaNetworkClient/Core (= 3.1.0)
+  - MoyaNetworkClient/Cache (3.1.0):
     - MoyaNetworkClient/Core
     - MoyaNetworkClient/Future
-  - MoyaNetworkClient/Core (2.0.4):
+  - MoyaNetworkClient/Core (3.1.0):
     - Moya (~> 14.0)
-  - MoyaNetworkClient/Future (2.0.4):
+  - MoyaNetworkClient/Future (3.1.0):
     - MoyaNetworkClient/Core
 
 DEPENDENCIES:
@@ -31,8 +31,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  MoyaNetworkClient: 06673debaf445b478ce89d18daa95df325657f9e
+  MoyaNetworkClient: ddb0ecbf41e07d8bdd25e24574a0f43f051d855d
 
 PODFILE CHECKSUM: a9d804f94f97c439b47ce5138ecd1f03b384650f
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.2
