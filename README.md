@@ -112,6 +112,11 @@ To integrate using Apple's Swift package manager, add the following as a depende
 
 and then specify `"MoyaNetworkClient"` as a dependency of the Target in which you wish to use MoyaNetworkClient.
 
+### Migration Guides
+
+**MoyaNC 3.0**:
+- Now the validation of the request occurs by the standard Moya parameter `var validationType: ValidationType`
+
 ## Author
 
 BarredEwe, barredEwe@gmail.com
