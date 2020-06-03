@@ -1,5 +1,6 @@
 import Moya
 import Foundation
+import Alamofire
 
 public typealias Result<Success> = Swift.Result<Success, Error>
 public typealias Completion<Value> = (Result<Value>) -> Void
@@ -81,6 +82,6 @@ public class MoyaNC<ErrorType: Error & Decodable> {
         objc_sync_enter(self)
         guard let currentRequest = requests[requestId] else { return false }
         objc_sync_exit(self)
-        return (swiftError as NSError).code == NSURLErrorCancelled && currentRequest.isCancelled
+        return currentRequest.isCancelled && (swiftError as NSError).localizedDescription == AFError.explicitlyCancelled.localizedDescription
     }
 }
