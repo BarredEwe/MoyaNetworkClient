@@ -45,10 +45,11 @@ extension MoyaNC {
                 print("An error occurred while retrieving data from the cache! Error: \(error.localizedDescription)")
                 completion(.failure(error))
             }
-        case .reloadIgnoringCacheData: return cacheProviderRequest(target, cache: cachePolicy, completion)
+        case .reloadIgnoringCacheData:
+            return cacheProviderRequest(target, cache: cachePolicy, completion)
         default: break
         }
-        return RequestAdapter(cancellable: SimpleCancellable())
+        return providerRequest(target, completion)
     }
 
     internal func getCache<Value: Codable>(for target: MoyaCacheTarget) -> Value? {
