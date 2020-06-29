@@ -37,6 +37,7 @@ extension MoyaNC {
         case .returnCacheDataElseLoad:
             guard let cacheValue: Value = getCache(for: target) else { return cacheProviderRequest(target, cache: cachePolicy, completion) }
             completion(.success(cacheValue))
+            return RequestAdapter(cancellable: SimpleCancellable())
         case .returnCacheDataDontLoad:
             if let cacheValue: Value = getCache(for: target) {
                 completion(.success(cacheValue))
@@ -45,11 +46,12 @@ extension MoyaNC {
                 print("An error occurred while retrieving data from the cache! Error: \(error.localizedDescription)")
                 completion(.failure(error))
             }
+            return RequestAdapter(cancellable: SimpleCancellable())
         case .reloadIgnoringCacheData:
             return cacheProviderRequest(target, cache: cachePolicy, completion)
-        default: break
+        case .notUseCache:
+            return providerRequest(target, completion)
         }
-        return providerRequest(target, completion)
     }
 
     internal func getCache<Value: Codable>(for target: MoyaCacheTarget) -> Value? {
