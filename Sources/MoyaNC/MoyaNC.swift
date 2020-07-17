@@ -58,7 +58,7 @@ public class MoyaNC<ErrorType: Error & Decodable> {
             switch Value.self {
             case is URL.Type: result = target.destinationURL as! Value
             case is Data.Type: result = response.data as! Value
-            case is String.Type: result = try response.mapJSON() as! Value
+            case is String.Type: result = try (response.mapJSON() as? Value) ?? response.mapString(atKeyPath: target.keyPath) as! Value
             default: result = try response.map(Value.self, atKeyPath: target.keyPath, using: self.jsonDecoder, failsOnEmptyData: false)
             }
             completion(.success(result))

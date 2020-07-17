@@ -28,8 +28,7 @@ extension Future {
                         if let transform = transform(s) {
                             transform.run { callback($0) }
                         } else {
-                            let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "FutureResult cannot be flatMap to nil"])
-                            callback(.failure(error))
+                            callback(.failure(MoyaNCError.flatMapNil))
                         }
                     case let .failure(error):
                         callback(.failure(error))
