@@ -3,8 +3,8 @@
 # * https://github.com/supermarin/xcpretty#usage
 
 
-osx_image: xcode10.3
-xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
+osx_image: xcode11.7
+xcode_destination: platform=iOS Simulator,OS=13.3,name=iPhone X
 xcode_project: Example/MoyaNetworkClient.xcworkspace
 xcode_scheme: MoyaNetworkClient-Example
 language: swift
@@ -15,8 +15,7 @@ env:
   - IOS_FRAMEWORK_SCHEME="MoyaNetworkClient"
   - EXAMPLE_SCHEME="MoyaNetworkClient-Example"
   matrix:
-    - DESTINATION="OS=11.3,name=iPhone X"          SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="YES"
-    - DESTINATION="OS=10.3.1,name=iPhone 7 Plus"   SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="NO"
+    - DESTINATION="OS=13.3,name=iPhone X"          SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="YES"
 podfile: Example/Podfile
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
