@@ -1,6 +1,7 @@
 import Moya
 #if !COCOAPODS
 import MoyaNC
+import Foundation
 #endif
 
 extension MoyaNCError {

@@ -50,7 +50,7 @@ extension MoyaNC {
         case .reloadIgnoringCacheData:
             return cacheProviderRequest(target, cache: cachePolicy, completion)
         case .notUseCache:
-            return providerRequest(target, completion)
+            return request(target as BaseTargetType, completion)
         }
     }
 
