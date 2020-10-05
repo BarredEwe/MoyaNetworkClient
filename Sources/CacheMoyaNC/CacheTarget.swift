@@ -5,6 +5,9 @@ public protocol CacheTarget {
 
     /// Used to store and retrieve data from the cache.
     var cacheStorage: CacheStorage? { get }
+
+    /// Used to set a custom key value for caching.
+    var cachingKey: CachingKey { get }
 }
 
 public extension CacheTarget {
@@ -14,5 +17,9 @@ public extension CacheTarget {
 
     var cacheStorage: CacheStorage? {
         return cachePolicy == .notUseCache ? nil : MemoryCacheStorage.shared
+    }
+
+    var cachingKey: CachingKey {
+        return (self as? MoyaCacheTarget).flatMap { CachingKey(target: $0) } ?? String(describing: self)
     }
 }
