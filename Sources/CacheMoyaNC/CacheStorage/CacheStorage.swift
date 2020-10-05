@@ -11,15 +11,15 @@ public protocol CacheStorage {
 }
 
 public extension CacheStorage {
-    func remove(for target: BaseTargetType) {
-        remove(for: CachingKey(target: target))
+    func remove(for target: MoyaCacheTarget) {
+        remove(for: target.cachingKey)
     }
 
-    func store<Value: Codable>(_ value: Value, for target: BaseTargetType) {
-        store(value, for: CachingKey(target: target))
+    func store<Value: Codable>(_ value: Value, for target: MoyaCacheTarget) {
+        store(value, for: target.cachingKey)
     }
 
-    func fetch<Value: Codable>(for target: BaseTargetType) -> Value? {
-        return fetch(for: CachingKey(target: target))
+    func fetch<Value: Codable>(for target: MoyaCacheTarget) -> Value? {
+        fetch(for: target.cachingKey)
     }
 }

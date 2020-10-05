@@ -38,4 +38,8 @@ public enum Route {
         case .connect: return .connect
         }
     }
+
+    public var rawValue: String {
+        method.rawValue + path
+    }
 }
