@@ -4,7 +4,7 @@
 
 
 osx_image: xcode12.0
-xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone 11 Pro
+xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
 xcode_project: Example/MoyaNetworkClient.xcworkspace
 xcode_scheme: MoyaNetworkClient-Example
 language: swift
@@ -15,7 +15,7 @@ env:
   - IOS_FRAMEWORK_SCHEME="MoyaNetworkClient"
   - EXAMPLE_SCHEME="MoyaNetworkClient-Example"
   matrix:
-    - DESTINATION="OS=11.3,name=iPhone 11 Pro"          SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="YES"
+    - DESTINATION="OS=11.3,name=iPhone X"          SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="YES"
 podfile: Example/Podfile
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
